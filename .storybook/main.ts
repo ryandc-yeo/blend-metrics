@@ -5,6 +5,10 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-actions",
+    "@storybook/addon-docs",
+    "@storybook/addon-viewport",
+    "storybook-addon-designs",
   ],
   framework: {
     name: "@storybook/nextjs",

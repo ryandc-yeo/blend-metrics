@@ -29,9 +29,12 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@storybook/addon-actions": "^7.0.24",
+    "@storybook/addon-docs": "^7.0.24",
     "@storybook/addon-essentials": "^7.0.24",
     "@storybook/addon-interactions": "^7.0.24",
     "@storybook/addon-links": "^7.0.24",
+    "@storybook/addon-viewport": "^7.0.24",
     "@storybook/blocks": "^7.0.24",
     "@storybook/nextjs": "^7.0.24",
     "@storybook/react": "^7.0.24",
@@ -44,6 +47,7 @@
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "storybook": "^7.0.24"
+    "storybook": "^7.0.24",
+    "storybook-addon-designs": "^6.3.1"
   }
 }

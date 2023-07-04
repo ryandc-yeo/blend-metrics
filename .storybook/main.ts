@@ -5,9 +5,8 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-actions",
-    "@storybook/addon-docs",
     "@storybook/addon-viewport",
+    "@storybook/addon-measure",
     "storybook-addon-designs",
   ],
   framework: {

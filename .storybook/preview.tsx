@@ -28,6 +28,13 @@ const preview: Preview = {
     ),
     withDesign,
   ],
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default preview;

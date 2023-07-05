@@ -10,11 +10,6 @@ const meta: Meta = {
     desc: {
       control: "text",
     },
-    asChild: {
-      table: {
-        disable: true,
-      },
-    },
   },
   parameters: {
     design: {

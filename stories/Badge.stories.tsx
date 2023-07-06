@@ -47,6 +47,12 @@ const meta: Meta = {
   args: {
     colorScheme: "gray",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=2-25063&mode=design&t=uQvGWvq312B210bw-4",
+    },
+  },
 };
 
 export default meta;

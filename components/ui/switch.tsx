@@ -8,7 +8,7 @@ import { Label } from "./label";
 import { VariantProps, cva } from "class-variance-authority";
 
 const switchVariants = cva(
-  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full bg-gray-100 p-0.5 transition-colors hover:bg-gray-200 focus:ring-2 focus:ring-gray-25 focus:ring-offset-2 focus:ring-offset-gray-25 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-100 data-checked:bg-primary-500 data-checked:hover:bg-primary-600 data-checked:focus:ring-primary-100 data-checked:focus:ring-offset-primary-100 data-checked:disabled:bg-gray-100",
+  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full bg-gray-100 p-0.5 transition-colors hover:bg-gray-200 focus:ring-2 focus:ring-gray-25 focus:ring-offset-2 focus:ring-offset-gray-25 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-100 data-checked:bg-primary-500 data-checked:hover:bg-primary-600 data-checked:focus:ring-primary-50 data-checked:focus:ring-offset-primary-50 data-checked:disabled:bg-gray-100",
   {
     variants: {
       size: {

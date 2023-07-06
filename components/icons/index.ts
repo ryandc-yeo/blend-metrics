@@ -3,3 +3,4 @@ export * from "./arrow-right";
 export * from "./plus";
 export * from "./dot";
 export * from "./x";
+export * from "./google-sheet";

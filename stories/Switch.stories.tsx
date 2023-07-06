@@ -10,11 +10,21 @@ const meta: Meta = {
     desc: {
       control: "text",
     },
+    size: {
+      control: "select",
+      options: ["sm", "md"],
+    },
+    disabled: {
+      control: "boolean",
+    },
+  },
+  args: {
+    disabled: false,
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/wTW5aoJfEb9KtPeU8KkbG3/BM---Integration-Partner---Development?type=design&node-id=3-99525&mode=design&t=t0Dj8nna877HiUD1-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=152-174640&mode=design&t=O7EPP3e9DWUfTSxg-4",
     },
   },
 };
@@ -25,7 +35,20 @@ export default meta;
 
 export const Default: Story = {
   args: {
+    size: "sm",
+  },
+};
+
+export const WithLabel: Story = {
+  args: {
+    ...Default.args,
     label: "Remember me",
+  },
+};
+
+export const WithDesc: Story = {
+  args: {
+    ...WithLabel.args,
     desc: "Save my login details for next time.",
   },
 };

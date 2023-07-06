@@ -70,9 +70,9 @@ const Switch = React.forwardRef<
     <div className="flex gap-x-2">
       <SwitchPrimitives.Root
         className={cn(switchVariants({ size, className }))}
+        id={id}
         {...props}
         ref={ref}
-        id={id}
       >
         <SwitchPrimitives.Thumb className={iconVariants({ size })} />
       </SwitchPrimitives.Root>

@@ -16,6 +16,9 @@ const switchVariants = cva(
         md: "h-6 w-11",
       },
     },
+    defaultVariants: {
+      size: "sm",
+    },
   }
 );
 
@@ -38,6 +41,9 @@ const iconVariants = cva(
         className: "data-checked:translate-x-5",
       },
     ],
+    defaultVariants: {
+      size: "sm",
+    },
   }
 );
 
@@ -67,9 +73,9 @@ const Switch = React.forwardRef<
   const id = React.useId();
 
   return (
-    <div className="flex gap-x-2">
+    <div className={cn("flex gap-x-2", className)}>
       <SwitchPrimitives.Root
-        className={cn(switchVariants({ size, className }))}
+        className={cn(switchVariants({ size }))}
         id={id}
         {...props}
         ref={ref}

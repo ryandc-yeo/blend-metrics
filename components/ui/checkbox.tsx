@@ -35,7 +35,7 @@ const iconVariants = cva("stroke-[3px]", {
   },
 });
 
-const labelVariants = cva("text-gray-700 peer-disabled:text-gray-300", {
+const labelVariants = cva("text-gray-700", {
   variants: {
     text: {
       sm: "text-sm",

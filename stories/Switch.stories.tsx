@@ -21,12 +21,6 @@ const meta: Meta = {
   args: {
     disabled: false,
   },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=152-174640&mode=design&t=O7EPP3e9DWUfTSxg-4",
-    },
-  },
 };
 
 type Story = StoryObj<typeof Switch>;
@@ -37,6 +31,12 @@ export const Default: Story = {
   args: {
     size: "sm",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201335&mode=design&t=VxRt1wafjT7dFLnZ-4",
+    },
+  },
 };
 
 export const WithLabel: Story = {
@@ -44,11 +44,23 @@ export const WithLabel: Story = {
     ...Default.args,
     label: "Remember me",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201336&mode=design&t=VxRt1wafjT7dFLnZ-4",
+    },
+  },
 };
 
 export const WithDesc: Story = {
   args: {
     ...WithLabel.args,
     desc: "Save my login details for next time.",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201337&mode=design&t=VxRt1wafjT7dFLnZ-4",
+    },
   },
 };

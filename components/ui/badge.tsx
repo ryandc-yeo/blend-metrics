@@ -41,6 +41,7 @@ export interface BadgeProps
   label?: string;
   avatar?: string;
   icon?: "dot" | "x" | "arrow-right" | "plus" | "arrow-left" | "avatar";
+  children?: React.ReactNode;
 }
 
 function Badge({
@@ -50,6 +51,7 @@ function Badge({
   size,
   icon,
   avatar,
+  children,
   ...props
 }: BadgeProps) {
   return (
@@ -74,7 +76,7 @@ function Badge({
         </div>
       )}
 
-      {icon !== "plus" && label}
+      {icon !== "plus" && (label || children)}
     </div>
   );
 }

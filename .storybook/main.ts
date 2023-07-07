@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-viewport",
     "@storybook/addon-measure",
+    "@storybook/addon-docs",
     "storybook-addon-designs",
   ],
   framework: {
@@ -15,7 +16,7 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
-    autodocs: "tag",
+    autodocs: true,
   },
 };
 export default config;

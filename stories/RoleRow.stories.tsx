@@ -12,9 +12,14 @@ const meta: Meta = {
     },
     variant: {
       control: "select",
-      options: ["outlined"],
+      options: ["outlined", "base"],
     },
     checked: {
+      table: {
+        disable: true,
+      },
+    },
+    onCheckedChange: {
       table: {
         disable: true,
       },
@@ -30,6 +35,7 @@ export const Base: Story = {
   args: {
     title: "Google Sheets",
     subtitle: "9 Granted Permissions",
+    variant: "base",
   },
 };
 

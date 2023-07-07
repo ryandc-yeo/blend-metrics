@@ -6,21 +6,24 @@ interface RoleRowProps {
   title: string;
   subtitle: string;
   checked?: boolean;
-  variant?: "outlined";
+  variant?: "outlined" | "base";
+  onCheckedChange?: () => void;
 }
 
 export const RoleRow = ({
   title,
   subtitle,
   checked,
-  variant,
+  variant = "base",
+  onCheckedChange,
 }: RoleRowProps) => {
   return (
     <div
       className={cn(
-        "py-3 pl-3 pr-[27px] flex drop-shadow-sm items-center justify-between border border-gray-200 rounded-lg",
+        "py-3 pl-3 pr-[27px] flex drop-shadow-sm items-center justify-between border rounded-lg",
         {
           "border-gray-300": variant === "outlined",
+          "border-gray-200": variant === "base",
         }
       )}
     >
@@ -37,6 +40,7 @@ export const RoleRow = ({
       <Switch
         className="gap-x-3"
         checked={checked}
+        onCheckedChange={onCheckedChange}
         label="Enable All Permissions"
       />
     </div>

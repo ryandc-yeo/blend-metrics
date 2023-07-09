@@ -37,7 +37,7 @@ const meta: Meta = {
     },
     avatar: {
       control: "select",
-      options: ["/avatar.jpg"],
+      options: ["/man.jpg", "/woman.jpg"],
       if: {
         arg: "icon",
         eq: "avatar",
@@ -92,7 +92,7 @@ export const Avatar: Story = {
   args: {
     icon: "avatar",
     size: "sm",
-    avatar: "/avatar.jpg",
+    avatar: "/man.jpg",
     label: "Label",
   },
 };

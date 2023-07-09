@@ -1,23 +1,22 @@
-import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
-  component: Checkbox,
+  component: RadioGroupItem,
   argTypes: {
     size: {
       control: "select",
       options: ["sm", "md", "lg"],
     },
-    rounded: {
-      control: "boolean",
-    },
     disabled: {
       control: "boolean",
+    },
+    value: {
+      control: "text",
     },
   },
   args: {
     disabled: false,
-    rounded: false,
   },
   parameters: {
     design: {
@@ -27,24 +26,48 @@ const meta: Meta = {
   },
 };
 
-type Story = StoryObj<typeof Checkbox>;
+type Story = StoryObj<typeof RadioGroupItem>;
 
 export default meta;
 
 export const Small: Story = {
   args: {
     size: "sm",
+    value: "Option 1",
+  },
+  render: (args) => {
+    return (
+      <RadioGroup>
+        <RadioGroupItem {...args} />
+      </RadioGroup>
+    );
   },
 };
 
 export const Medium: Story = {
   args: {
     size: "md",
+    value: "Option 1",
+  },
+  render: (args) => {
+    return (
+      <RadioGroup>
+        <RadioGroupItem {...args} />
+      </RadioGroup>
+    );
   },
 };
 
 export const Large: Story = {
   args: {
     size: "lg",
+    value: "Option 1",
+  },
+  render: (args) => {
+    return (
+      <RadioGroup>
+        <RadioGroupItem {...args} />
+      </RadioGroup>
+    );
   },
 };

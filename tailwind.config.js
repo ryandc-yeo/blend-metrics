@@ -74,7 +74,7 @@ module.exports = {
           black: "#7A271A",
         },
         warning: {
-          25: "#7A271A",
+          25: "#FFFCF5",
           50: "#FFFAEB",
           100: "#FEF0C7",
           200: "#FEDF89",

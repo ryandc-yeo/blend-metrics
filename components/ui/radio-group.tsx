@@ -3,9 +3,9 @@
 import * as React from "react";
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import { Circle } from "lucide-react";
-import { Label } from "./label";
 
 import { cn } from "@/lib/utils";
+import { VariantProps, cva } from "class-variance-authority";
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
@@ -13,7 +13,7 @@ const RadioGroup = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <RadioGroupPrimitive.Root
-      className={cn("grid gap-[11px]", className)}
+      className={cn("grid gap-2", className)}
       {...props}
       ref={ref}
     />
@@ -21,51 +21,53 @@ const RadioGroup = React.forwardRef<
 });
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 
+const radioGroupItemVariants = cva(
+  "peer h-4 w-4 shrink-0 rounded-full border-[1.5px] border-gray-300 focus-visible:outline-none hover:border-primary-400 hover:ring-2 hover:ring-offset-2 hover:ring-primary-50 hover:ring-offset-primary-50 hover:disabled:ring-0 hover:disabled:ring-offset-0 data-checked:border-primary-500 data-checked:text-primary-500 disabled:border-gray-200 disabled:text-gray-200 disabled:bg-gray-50 disabled:cursor-not-allowed data-checked:disabled:bg-gray-50 data-checked:disabled:border-gray-200 data-checked:disabled:text-gray-200",
+  {
+    variants: {
+      size: {
+        sm: "h-4 w-4",
+        md: "h-5 w-5",
+        lg: "h-6 w-6",
+      },
+    },
+    defaultVariants: {
+      size: "sm",
+    },
+  }
+);
+
+const iconVariants = cva("fill-current text-current", {
+  variants: {
+    size: {
+      sm: "h-1.5 w-1.5",
+      md: "h-2 w-2",
+      lg: "h-2.5 w-2.5",
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+  },
+});
+
 interface RadioGroupItemProps
-  extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item> {
-  label: string;
-  category?: string;
-  desc?: string;
-}
+  extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>,
+    VariantProps<typeof radioGroupItemVariants> {}
 
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   RadioGroupItemProps
->(({ className, children, category, desc, label, ...props }, ref) => {
-  const id = React.useId();
-
+>(({ className, children, size, ...props }, ref) => {
   return (
-    <div className="flex gap-x-2">
-      <RadioGroupPrimitive.Item
-        ref={ref}
-        className={cn(
-          "peer h-4 w-4 shrink-0 rounded-full border border-gray-300 text-white hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EAF0FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EAF0FF] disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary-500 data-[state=checked]:bg-[#EAF0FF] data-[state=checked]:text-primary-500 data-[state=checked]:hover:border-[#2B61E5] data-[state=checked]:hover:text-[#2B61E5]",
-          className
-        )}
-        {...props}
-        id={id}
-      >
-        <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-          <Circle className="h-1.5 w-1.5 fill-current text-current" />
-        </RadioGroupPrimitive.Indicator>
-      </RadioGroupPrimitive.Item>
-      <Label className="text-sm text-gray-700" htmlFor={id}>
-        {category ? (
-          <div className="flex items-center gap-x-1.5">
-            <span>{label}</span>
-            <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gray-700"></span>
-            <span>{category}</span>
-          </div>
-        ) : (
-          label
-        )}
-        {desc && (
-          <span className="block text-sm font-normal text-gray-500">
-            {desc}
-          </span>
-        )}
-      </Label>
-    </div>
+    <RadioGroupPrimitive.Item
+      ref={ref}
+      className={cn(radioGroupItemVariants({ size, className }))}
+      {...props}
+    >
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className={iconVariants({ size })} />
+      </RadioGroupPrimitive.Indicator>
+    </RadioGroupPrimitive.Item>
   );
 });
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;

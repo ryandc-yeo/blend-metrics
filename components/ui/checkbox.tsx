@@ -3,12 +3,12 @@
 import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";
-import { VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
 const checkboxVariants = cva(
-  "peer rounded-[5px] shrink-0 border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-offset-2 hover:ring-primary-50 hover:ring-offset-primary-50 disabled:hover:ring-0 disabled:hover:ring-offset-0 disabled:bg-gray-50 disabled:text-gray-200 disabled:border-gray-200 disabled:cursor-not-allowed data-checked:bg-primary-500 data-checked:border-primary-500 data-checked:text-white data-checked:disabled:border-gray-200 data-checked:disabled:text-gray-200 data-checked:disabled:bg-gray-50",
+  "peer shrink-0 rounded-[5px] border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-primary-50 hover:ring-offset-2 hover:ring-offset-primary-50 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2 focus:ring-offset-primary-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-200 disabled:hover:ring-0 disabled:hover:ring-offset-0 data-checked:border-primary-500 data-checked:bg-primary-500 data-checked:text-white data-checked:disabled:border-gray-200 data-checked:disabled:bg-gray-50 data-checked:disabled:text-gray-200",
   {
     variants: {
       size: {
@@ -54,9 +54,7 @@ const Checkbox = React.forwardRef<
       {...props}
       ref={ref}
     >
-      <CheckboxPrimitive.Indicator
-        className={cn("flex items-center justify-center text-current")}
-      >
+      <CheckboxPrimitive.Indicator className="flex items-center justify-center text-current">
         <Check className={iconVariants({ size })} />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>

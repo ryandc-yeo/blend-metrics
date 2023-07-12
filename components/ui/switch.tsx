@@ -4,31 +4,37 @@ import * as React from "react";
 import * as SwitchPrimitives from "@radix-ui/react-switch";
 
 import { cn } from "@/lib/utils";
-import { Label } from "./label";
-import { VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 
 const switchVariants = cva(
-  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full bg-gray-100 p-0.5 transition-colors hover:bg-gray-200 focus:ring-2 focus:ring-gray-25 focus:ring-offset-2 focus:ring-offset-gray-25 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-100 data-checked:bg-primary-500 data-checked:hover:bg-primary-600 data-checked:focus:ring-primary-50 data-checked:focus:ring-offset-primary-50 data-checked:disabled:bg-gray-100",
+  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full p-0.5 transition-colors focus:ring-2 focus:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:opacity-50 data-checked:disabled:bg-gray-200",
   {
     variants: {
       size: {
         sm: "h-5 w-9",
         md: "h-6 w-11",
+        lg: "h-7 w-[52px]",
+      },
+      colorScheme: {
+        blue: "bg-gray-200 hover:bg-primary-100 focus:ring-primary-50 focus:ring-offset-primary-50 data-checked:bg-primary-500",
+        gray: "bg-gray-100 hover:bg-gray-200 focus:ring-gray-100 focus:ring-offset-gray-100 data-checked:bg-gray-300",
       },
     },
     defaultVariants: {
       size: "sm",
+      colorScheme: "blue",
     },
   }
 );
 
-const iconVariants = cva(
+const thumbVariants = cva(
   "pointer-events-none block rounded-full bg-white shadow-sm transition-transform data-unchecked:translate-x-0",
   {
     variants: {
       size: {
         sm: "h-4 w-4",
         md: "h-5 w-5",
+        lg: "h-6 w-6",
       },
     },
     compoundVariants: [
@@ -40,6 +46,10 @@ const iconVariants = cva(
         size: "md",
         className: "data-checked:translate-x-5",
       },
+      {
+        size: "lg",
+        className: "data-checked:translate-x-6",
+      },
     ],
     defaultVariants: {
       size: "sm",
@@ -47,50 +57,22 @@ const iconVariants = cva(
   }
 );
 
-const labelVariants = cva("text-gray-700", {
-  variants: {
-    text: {
-      sm: "text-sm",
-      md: "text-base",
-    },
-  },
-  defaultVariants: {
-    text: "sm",
-  },
-});
-
 interface SwitchProps
   extends React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>,
-    VariantProps<typeof switchVariants> {
-  label?: string;
-  desc?: string;
-}
+    VariantProps<typeof switchVariants> {}
 
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   SwitchProps
->(({ className, label, desc, size, ...props }, ref) => {
-  const id = React.useId();
-
+>(({ className, size, colorScheme, ...props }, ref) => {
   return (
-    <div className={cn("flex gap-x-2", className)}>
-      <SwitchPrimitives.Root
-        className={cn(switchVariants({ size }))}
-        id={id}
-        {...props}
-        ref={ref}
-      >
-        <SwitchPrimitives.Thumb className={iconVariants({ size })} />
-      </SwitchPrimitives.Root>
-      {label && (
-        <Label className={labelVariants({ text: size })} htmlFor={id}>
-          {label}
-          {desc && (
-            <span className="block font-normal text-gray-500">{desc}</span>
-          )}
-        </Label>
-      )}
-    </div>
+    <SwitchPrimitives.Root
+      className={cn(switchVariants({ size, colorScheme, className }))}
+      {...props}
+      ref={ref}
+    >
+      <SwitchPrimitives.Thumb className={thumbVariants({ size })} />
+    </SwitchPrimitives.Root>
   );
 });
 Switch.displayName = SwitchPrimitives.Root.displayName;

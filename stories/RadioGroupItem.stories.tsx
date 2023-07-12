@@ -1,4 +1,5 @@
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup } from "@/components/ui/radio-group";
+import { RadioGroupItem } from "@/components/ui/radio-group-item";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
@@ -21,7 +22,7 @@ const meta: Meta = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=401-202989&mode=design&t=wiyW8aUOYnMLZNQc-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-203414&mode=design&t=rlIa0Hm4A6BZWLwF-4",
     },
   },
 };

@@ -4,15 +4,13 @@ import { Meta, StoryObj } from "@storybook/react";
 const meta: Meta = {
   component: Switch,
   argTypes: {
-    label: {
-      control: "text",
-    },
-    desc: {
-      control: "text",
-    },
     size: {
       control: "select",
-      options: ["sm", "md"],
+      options: ["sm", "md", "lg"],
+    },
+    colorScheme: {
+      control: "select",
+      options: ["blue", "gray"],
     },
     disabled: {
       control: "boolean",
@@ -20,6 +18,13 @@ const meta: Meta = {
   },
   args: {
     disabled: false,
+    colorScheme: "blue",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-201831&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+    },
   },
 };
 
@@ -27,40 +32,20 @@ type Story = StoryObj<typeof Switch>;
 
 export default meta;
 
-export const Default: Story = {
+export const Small: Story = {
   args: {
     size: "sm",
   },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201335&mode=design&t=VxRt1wafjT7dFLnZ-4",
-    },
+};
+
+export const Medium: Story = {
+  args: {
+    size: "md",
   },
 };
 
-export const WithLabel: Story = {
+export const Large: Story = {
   args: {
-    ...Default.args,
-    label: "Remember me",
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201336&mode=design&t=VxRt1wafjT7dFLnZ-4",
-    },
-  },
-};
-
-export const WithDesc: Story = {
-  args: {
-    ...WithLabel.args,
-    desc: "Save my login details for next time.",
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=334-201337&mode=design&t=VxRt1wafjT7dFLnZ-4",
-    },
+    size: "md",
   },
 };

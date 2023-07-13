@@ -6,3 +6,4 @@ export * from "./radio-group";
 export * from "./switch";
 export * from "./dropdown-menu";
 export * from "./tooltip";
+export * from "./avatar";

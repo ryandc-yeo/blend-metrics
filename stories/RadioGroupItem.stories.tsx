@@ -31,7 +31,7 @@ type Story = StoryObj<typeof RadioGroupItem>;
 
 export default meta;
 
-export const Small: Story = {
+export const Sm: Story = {
   args: {
     value: "Option 1",
   },
@@ -44,7 +44,7 @@ export const Small: Story = {
   },
 };
 
-export const Medium: Story = {
+export const Md: Story = {
   args: {
     size: "md",
     value: "Option 1",
@@ -58,7 +58,7 @@ export const Medium: Story = {
   },
 };
 
-export const Large: Story = {
+export const Lg: Story = {
   args: {
     size: "lg",
     value: "Option 1",

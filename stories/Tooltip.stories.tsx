@@ -22,7 +22,7 @@ export default meta;
 
 type Story = StoryObj<typeof TooltipContent>;
 
-export const Small: Story = {
+export const Sm: Story = {
   render: (args) => {
     return (
       <TooltipProvider>
@@ -42,7 +42,7 @@ export const Small: Story = {
   },
 };
 
-export const Medium: Story = {
+export const Md: Story = {
   args: {
     size: "md",
   },

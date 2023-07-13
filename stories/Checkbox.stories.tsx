@@ -32,15 +32,15 @@ type Story = StoryObj<typeof Checkbox>;
 
 export default meta;
 
-export const Small: Story = {};
+export const Sm: Story = {};
 
-export const Medium: Story = {
+export const Md: Story = {
   args: {
     size: "md",
   },
 };
 
-export const Large: Story = {
+export const Lg: Story = {
   args: {
     size: "lg",
   },

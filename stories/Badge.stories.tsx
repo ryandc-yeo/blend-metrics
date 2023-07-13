@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { ArrowRight, ArrowUp, Dot, Plus, X } from "lucide-react";
-import Image from "next/image";
 
-import { Badge } from "@/components/ui";
+import { Avatar, AvatarFallback, AvatarImage, Badge } from "@/components/ui";
 
 const meta: Meta = {
   component: Badge,
@@ -111,9 +110,10 @@ export const WithAvatar: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
-        <div className="relative h-4 w-4 overflow-hidden rounded-full">
-          <Image className="object-cover" src="/woman.jpg" alt="Woman" fill />
-        </div>
+        <Avatar className="h-4 w-4">
+          <AvatarImage src="/woman.jpg" alt="Woman" />
+          <AvatarFallback>W</AvatarFallback>
+        </Avatar>
         Label
       </Badge>
     );

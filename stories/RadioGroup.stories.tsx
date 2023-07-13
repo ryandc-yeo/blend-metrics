@@ -1,7 +1,6 @@
-import { Label } from "@/components/ui/label";
-import { RadioGroup } from "@/components/ui/radio-group";
-import { RadioGroupItem } from "@/components/ui/radio-group-item";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { Label, RadioGroup, RadioGroupItem } from "@/components/ui";
 
 const meta: Meta = {
   component: RadioGroup,

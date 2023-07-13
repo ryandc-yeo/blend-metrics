@@ -1,6 +1,6 @@
-import { RadioGroup } from "@/components/ui/radio-group";
-import { RadioGroupItem } from "@/components/ui/radio-group-item";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { RadioGroup, RadioGroupItem } from "@/components/ui";
 
 const meta: Meta = {
   component: RadioGroupItem,
@@ -33,7 +33,6 @@ export default meta;
 
 export const Small: Story = {
   args: {
-    size: "sm",
     value: "Option 1",
   },
   render: (args) => {

@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-measure",
     "@storybook/addon-docs",
     "storybook-addon-designs",
+    "@storybook/addon-mdx-gfm",
   ],
   framework: {
     name: "@storybook/nextjs",

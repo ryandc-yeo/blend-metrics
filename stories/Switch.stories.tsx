@@ -1,5 +1,6 @@
-import { Switch } from "@/components/ui/switch";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { Switch } from "@/components/ui";
 
 const meta: Meta = {
   component: Switch,
@@ -18,7 +19,6 @@ const meta: Meta = {
   },
   args: {
     disabled: false,
-    colorScheme: "blue",
   },
   parameters: {
     design: {
@@ -33,9 +33,7 @@ type Story = StoryObj<typeof Switch>;
 export default meta;
 
 export const Small: Story = {
-  args: {
-    size: "sm",
-  },
+  args: {},
 };
 
 export const Medium: Story = {

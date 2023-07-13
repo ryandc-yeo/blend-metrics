@@ -1,5 +1,6 @@
-import { Checkbox } from "@/components/ui/checkbox";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { Checkbox } from "@/components/ui";
 
 const meta: Meta = {
   component: Checkbox,
@@ -31,11 +32,7 @@ type Story = StoryObj<typeof Checkbox>;
 
 export default meta;
 
-export const Small: Story = {
-  args: {
-    size: "sm",
-  },
-};
+export const Small: Story = {};
 
 export const Medium: Story = {
   args: {

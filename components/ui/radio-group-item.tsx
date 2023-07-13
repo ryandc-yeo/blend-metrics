@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 
 const radioGroupItemVariants = cva(
-  "peer h-4 w-4 shrink-0 rounded-full border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-primary-50 hover:ring-offset-2 hover:ring-offset-primary-50 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2 focus:ring-offset-primary-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-200 hover:disabled:ring-0 hover:disabled:ring-offset-0 data-checked:border-primary-500 data-checked:text-primary-500 data-checked:disabled:border-gray-200 data-checked:disabled:bg-gray-50 data-checked:disabled:text-gray-200",
+  "peer h-4 w-4 shrink-0 rounded-full border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-primary-50 hover:ring-offset-2 hover:ring-offset-primary-50 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2 focus:ring-offset-primary-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-200 hover:disabled:ring-0 hover:disabled:ring-offset-0 data-[state=checked]:border-primary-500 data-[state=checked]:text-primary-500 data-[state=checked]:disabled:border-gray-200 data-[state=checked]:disabled:bg-gray-50 data-[state=checked]:disabled:text-gray-200",
   {
     variants: {
       size: {

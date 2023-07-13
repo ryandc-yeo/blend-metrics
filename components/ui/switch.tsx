@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 
 const switchVariants = cva(
-  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full p-0.5 transition-colors focus:ring-2 focus:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:opacity-50 data-checked:disabled:bg-gray-200",
+  "peer inline-flex shrink-0 cursor-pointer items-center rounded-full p-0.5 transition-colors focus:ring-2 focus:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:opacity-50 data-[state=checked]:disabled:bg-gray-200",
   {
     variants: {
       size: {
@@ -16,8 +16,8 @@ const switchVariants = cva(
         lg: "h-7 w-[52px]",
       },
       colorScheme: {
-        blue: "bg-gray-200 hover:bg-primary-100 focus:ring-primary-50 focus:ring-offset-primary-50 data-checked:bg-primary-500",
-        gray: "bg-gray-100 hover:bg-gray-200 focus:ring-gray-100 focus:ring-offset-gray-100 data-checked:bg-gray-300",
+        blue: "bg-gray-200 hover:bg-primary-100 focus:ring-primary-50 focus:ring-offset-primary-50 data-[state=checked]:bg-primary-500",
+        gray: "bg-gray-100 hover:bg-gray-200 focus:ring-gray-100 focus:ring-offset-gray-100 data-[state=checked]:bg-gray-300",
       },
     },
     defaultVariants: {
@@ -40,15 +40,15 @@ const thumbVariants = cva(
     compoundVariants: [
       {
         size: "sm",
-        className: "data-checked:translate-x-4",
+        className: "data-[state=checked]:translate-x-4",
       },
       {
         size: "md",
-        className: "data-checked:translate-x-5",
+        className: "data-[state=checked]:translate-x-5",
       },
       {
         size: "lg",
-        className: "data-checked:translate-x-6",
+        className: "data-[state=checked]:translate-x-6",
       },
     ],
     defaultVariants: {

@@ -8,7 +8,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const checkboxVariants = cva(
-  "peer shrink-0 rounded-[5px] border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-primary-50 hover:ring-offset-2 hover:ring-offset-primary-50 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2 focus:ring-offset-primary-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-200 disabled:hover:ring-0 disabled:hover:ring-offset-0 data-checked:border-primary-500 data-checked:bg-primary-500 data-checked:text-white data-checked:disabled:border-gray-200 data-checked:disabled:bg-gray-50 data-checked:disabled:text-gray-200",
+  "peer shrink-0 border-[1.5px] border-gray-300 hover:border-primary-400 hover:ring-2 hover:ring-primary-50 hover:ring-offset-2 hover:ring-offset-primary-50 focus:ring-2 focus:ring-primary-50 focus:ring-offset-2 focus:ring-offset-primary-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-200 disabled:hover:ring-0 disabled:hover:ring-offset-0 data-[state=checked]:border-primary-500 data-[state=checked]:bg-primary-500 data-[state=checked]:text-white data-[state=checked]:disabled:border-gray-200 data-[state=checked]:disabled:bg-gray-50 data-[state=checked]:disabled:text-gray-200",
   {
     variants: {
       size: {
@@ -16,9 +16,14 @@ const checkboxVariants = cva(
         md: "h-5 w-5",
         lg: "h-6 w-6",
       },
+      intent: {
+        rounded: "rounded-[5px]",
+        circle: "rounded-full",
+      },
     },
     defaultVariants: {
       size: "sm",
+      intent: "rounded",
     },
   }
 );
@@ -38,19 +43,15 @@ const iconVariants = cva("stroke-[2.5px]", {
 
 interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-    VariantProps<typeof checkboxVariants> {
-  rounded?: boolean;
-}
+    VariantProps<typeof checkboxVariants> {}
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   CheckboxProps
->(({ className, size, rounded, ...props }, ref) => {
+>(({ className, size, intent, ...props }, ref) => {
   return (
     <CheckboxPrimitive.Root
-      className={cn(checkboxVariants({ size, className }), {
-        "rounded-full": rounded,
-      })}
+      className={cn(checkboxVariants({ size, intent, className }))}
       {...props}
       ref={ref}
     >

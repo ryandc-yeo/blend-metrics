@@ -13,7 +13,7 @@ type Story = StoryObj<typeof RadioGroup>;
 export const SmallWithLabel: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-2.5" {...args}>
+      <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 1" id="option-one" />
           <Label
@@ -115,7 +115,7 @@ export const LargeWithLabel: Story = {
 export const SmallWithDesc: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-2.5" {...args}>
+      <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 1" id="option-one" />
           <Label

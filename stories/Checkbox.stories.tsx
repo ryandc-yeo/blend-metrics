@@ -9,8 +9,9 @@ const meta: Meta = {
       control: "select",
       options: ["sm", "md", "lg"],
     },
-    rounded: {
-      control: "boolean",
+    intent: {
+      control: "select",
+      options: ["rounded", "circle"],
     },
     disabled: {
       control: "boolean",
@@ -18,7 +19,6 @@ const meta: Meta = {
   },
   args: {
     disabled: false,
-    rounded: false,
   },
   parameters: {
     design: {

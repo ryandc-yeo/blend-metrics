@@ -1,21 +1,21 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { HelperText, Label, RadioGroup, RadioGroupItem } from "@/components/ui";
+import { HelperText, Label, CheckboxGroup, Checkbox } from "@/components/ui";
 
 const meta: Meta = {
-  component: RadioGroup,
+  component: CheckboxGroup,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof RadioGroup>;
+type Story = StoryObj<typeof CheckboxGroup>;
 
 export const SmLabel: Story = {
   render: (args) => {
     return (
-      <RadioGroup {...args}>
+      <CheckboxGroup {...args}>
         <div className="flex gap-x-3">
-          <RadioGroupItem value="Option 1" id="option-one" />
+          <Checkbox value="Option 1" id="option-one" />
           <Label
             className="text-xs leading-[18px] text-gray-800"
             htmlFor="option-one"
@@ -25,7 +25,7 @@ export const SmLabel: Story = {
         </div>
 
         <div className="flex gap-x-3">
-          <RadioGroupItem value="Option 2" id="option-two" />
+          <Checkbox value="Option 2" id="option-two" />
           <Label
             className="text-xs leading-[18px] text-gray-800"
             htmlFor="option-two"
@@ -33,13 +33,13 @@ export const SmLabel: Story = {
             Option 2
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202143&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196255&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };
@@ -47,27 +47,27 @@ export const SmLabel: Story = {
 export const MdLabel: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-3" {...args}>
+      <CheckboxGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
-          <RadioGroupItem size="md" value="Option 1" id="option-one" />
+          <Checkbox size="md" value="Option 1" id="option-one" />
           <Label className="text-gray-800" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
-          <RadioGroupItem size="md" value="Option 2" id="option-two" />
+          <Checkbox size="md" value="Option 2" id="option-two" />
           <Label className="text-gray-800" htmlFor="option-two">
             Option 2
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202225&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196274&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };
@@ -75,27 +75,27 @@ export const MdLabel: Story = {
 export const LgLabel: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-3.5" {...args}>
+      <CheckboxGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
-          <RadioGroupItem size="lg" value="Option 1" id="option-one" />
+          <Checkbox size="lg" value="Option 1" id="option-one" />
           <Label className="text-gray-800" size="md" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-4">
-          <RadioGroupItem size="lg" value="Option 2" id="option-two" />
+          <Checkbox size="lg" value="Option 2" id="option-two" />
           <Label className="text-gray-800" size="md" htmlFor="option-two">
             Option 2
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202303&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196293&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };
@@ -103,9 +103,9 @@ export const LgLabel: Story = {
 export const SmLabelHelperText: Story = {
   render: (args) => {
     return (
-      <RadioGroup {...args}>
+      <CheckboxGroup {...args}>
         <div className="flex gap-x-3">
-          <RadioGroupItem value="Option 1" id="option-one" />
+          <Checkbox value="Option 1" id="option-one" />
           <Label
             className="flex flex-col text-xs leading-[18px] text-gray-800"
             htmlFor="option-one"
@@ -118,7 +118,7 @@ export const SmLabelHelperText: Story = {
         </div>
 
         <div className="flex gap-x-3">
-          <RadioGroupItem value="Option 2" id="option-two" />
+          <Checkbox value="Option 2" id="option-two" />
           <Label
             className="flex flex-col text-xs leading-[18px] text-gray-800"
             htmlFor="option-two"
@@ -129,13 +129,13 @@ export const SmLabelHelperText: Story = {
             </HelperText>
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202158&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196249&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };
@@ -143,27 +143,27 @@ export const SmLabelHelperText: Story = {
 export const MdLabelHelperText: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-3" {...args}>
+      <CheckboxGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
-          <RadioGroupItem size="md" value="Option 1" id="option-one" />
+          <Checkbox size="md" value="Option 1" id="option-one" />
           <Label className="flex flex-col text-gray-800" htmlFor="option-one">
             Option 1 <HelperText>Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
-          <RadioGroupItem size="md" value="Option 2" id="option-two" />
+          <Checkbox size="md" value="Option 2" id="option-two" />
           <Label className="flex flex-col text-gray-800" htmlFor="option-two">
             Option 2 <HelperText>Short description here</HelperText>
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202219&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196268&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };
@@ -171,9 +171,9 @@ export const MdLabelHelperText: Story = {
 export const LgLabelHelperText: Story = {
   render: (args) => {
     return (
-      <RadioGroup className="space-y-3.5" {...args}>
+      <CheckboxGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
-          <RadioGroupItem size="lg" value="Option 1" id="option-one" />
+          <Checkbox size="lg" value="Option 1" id="option-one" />
           <Label
             className="flex flex-col text-gray-800"
             size="md"
@@ -184,7 +184,7 @@ export const LgLabelHelperText: Story = {
         </div>
 
         <div className="flex gap-x-4">
-          <RadioGroupItem size="lg" value="Option 2" id="option-two" />
+          <Checkbox size="lg" value="Option 2" id="option-two" />
           <Label
             className="flex flex-col text-gray-800"
             size="md"
@@ -193,13 +193,13 @@ export const LgLabelHelperText: Story = {
             Option 2 <HelperText size="md">Short description here</HelperText>
           </Label>
         </div>
-      </RadioGroup>
+      </CheckboxGroup>
     );
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202297&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=934-196287&mode=design&t=Dqio8O8PYU8ELDz0-4",
     },
   },
 };

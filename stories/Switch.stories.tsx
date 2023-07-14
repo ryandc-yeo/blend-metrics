@@ -112,7 +112,7 @@ export const LgLabel: Story = {
   },
 };
 
-export const SmLabelHelpText: Story = {
+export const SmLabelHelperText: Story = {
   argTypes: {
     size: {
       table: {
@@ -137,7 +137,7 @@ export const SmLabelHelpText: Story = {
   },
 };
 
-export const MdLabelHelpText: Story = {
+export const MdLabelHelperText: Story = {
   args: {
     size: "md",
   },
@@ -158,11 +158,11 @@ export const MdLabelHelpText: Story = {
     </div>
   ),
   parameters: {
-    ...SmLabelHelpText.parameters,
+    ...SmLabelHelperText.parameters,
   },
 };
 
-export const LgLabelHelpText: Story = {
+export const LgLabelHelperText: Story = {
   args: {
     size: "lg",
   },
@@ -183,6 +183,6 @@ export const LgLabelHelpText: Story = {
     </div>
   ),
   parameters: {
-    ...SmLabelHelpText.parameters,
+    ...SmLabelHelperText.parameters,
   },
 };

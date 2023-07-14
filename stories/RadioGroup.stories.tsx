@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Label, RadioGroup, RadioGroupItem } from "@/components/ui";
+import { HelperText, Label, RadioGroup, RadioGroupItem } from "@/components/ui";
 
 const meta: Meta = {
   component: RadioGroup,
@@ -10,14 +10,14 @@ export default meta;
 
 type Story = StoryObj<typeof RadioGroup>;
 
-export const SmallWithLabel: Story = {
+export const SmLabel: Story = {
   render: (args) => {
     return (
       <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 1" id="option-one" />
           <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800 peer-disabled:opacity-50"
+            className="text-xs leading-[18px] text-gray-800"
             htmlFor="option-one"
           >
             Option 1
@@ -27,7 +27,7 @@ export const SmallWithLabel: Story = {
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 2" id="option-two" />
           <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800 peer-disabled:opacity-50"
+            className="text-xs leading-[18px] text-gray-800"
             htmlFor="option-two"
           >
             Option 2
@@ -44,26 +44,20 @@ export const SmallWithLabel: Story = {
   },
 };
 
-export const MediumWithLabel: Story = {
+export const MdLabel: Story = {
   render: (args) => {
     return (
       <RadioGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
           <RadioGroupItem size="md" value="Option 1" id="option-one" />
-          <Label
-            className="flex flex-col text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-one"
-          >
+          <Label className="text-gray-800" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
           <RadioGroupItem size="md" value="Option 2" id="option-two" />
-          <Label
-            className="flex flex-col text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-two"
-          >
+          <Label className="text-gray-800" htmlFor="option-two">
             Option 2
           </Label>
         </div>
@@ -78,26 +72,20 @@ export const MediumWithLabel: Story = {
   },
 };
 
-export const LargeWithLabel: Story = {
+export const LgLabel: Story = {
   render: (args) => {
     return (
       <RadioGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
           <RadioGroupItem size="lg" value="Option 1" id="option-one" />
-          <Label
-            className="flex flex-col text-base leading-6 text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-one"
-          >
+          <Label className="text-gray-800" size="md" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-4">
           <RadioGroupItem size="lg" value="Option 2" id="option-two" />
-          <Label
-            className="flex flex-col text-base leading-6 text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-two"
-          >
+          <Label className="text-gray-800" size="md" htmlFor="option-two">
             Option 2
           </Label>
         </div>
@@ -112,33 +100,33 @@ export const LargeWithLabel: Story = {
   },
 };
 
-export const SmallWithDesc: Story = {
+export const SmLabelHelpText: Story = {
   render: (args) => {
     return (
       <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 1" id="option-one" />
           <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800 peer-disabled:opacity-50"
+            className="flex flex-col text-xs leading-[18px] text-gray-800"
             htmlFor="option-one"
           >
-            <span>Option 1</span>
-            <span className="font-normal text-gray-500">
+            Option 1
+            <HelperText className="text-xs leading-[18px]">
               Short description here
-            </span>
+            </HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-3">
           <RadioGroupItem value="Option 2" id="option-two" />
           <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800 peer-disabled:opacity-50"
+            className="flex flex-col text-xs leading-[18px] text-gray-800"
             htmlFor="option-two"
           >
-            <span>Option 2</span>
-            <span className="font-normal text-gray-500">
+            Option 2
+            <HelperText className="text-xs leading-[18px]">
               Short description here
-            </span>
+            </HelperText>
           </Label>
         </div>
       </RadioGroup>
@@ -152,33 +140,21 @@ export const SmallWithDesc: Story = {
   },
 };
 
-export const MediumWithDesc: Story = {
+export const MdLabelHelpText: Story = {
   render: (args) => {
     return (
       <RadioGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
           <RadioGroupItem size="md" value="Option 1" id="option-one" />
-          <Label
-            className="flex flex-col text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-one"
-          >
-            <span>Option 1</span>
-            <span className="font-normal text-gray-500">
-              Short description here
-            </span>
+          <Label className="flex flex-col text-gray-800" htmlFor="option-one">
+            Option 1 <HelperText>Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
           <RadioGroupItem size="md" value="Option 2" id="option-two" />
-          <Label
-            className="flex flex-col text-gray-800 peer-disabled:opacity-50"
-            htmlFor="option-two"
-          >
-            <span>Option 2</span>
-            <span className="font-normal text-gray-500">
-              Short description here
-            </span>
+          <Label className="flex flex-col text-gray-800" htmlFor="option-two">
+            Option 2 <HelperText>Short description here</HelperText>
           </Label>
         </div>
       </RadioGroup>
@@ -192,33 +168,29 @@ export const MediumWithDesc: Story = {
   },
 };
 
-export const LargeWithDesc: Story = {
+export const LgLabelHelpText: Story = {
   render: (args) => {
     return (
       <RadioGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
           <RadioGroupItem size="lg" value="Option 1" id="option-one" />
           <Label
-            className="flex flex-col text-base leading-6 text-gray-800 peer-disabled:opacity-50"
+            className="flex flex-col text-gray-800"
+            size="md"
             htmlFor="option-one"
           >
-            <span>Option 1</span>
-            <span className="font-normal text-gray-500">
-              Short description here
-            </span>
+            Option 1 <HelperText size="md">Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-4">
           <RadioGroupItem size="lg" value="Option 2" id="option-two" />
           <Label
-            className="flex flex-col text-base leading-6 text-gray-800 peer-disabled:opacity-50"
+            className="flex flex-col text-gray-800"
+            size="md"
             htmlFor="option-two"
           >
-            <span>Option 2</span>
-            <span className="font-normal text-gray-500">
-              Short description here
-            </span>
+            Option 2 <HelperText size="md">Short description here</HelperText>
           </Label>
         </div>
       </RadioGroup>

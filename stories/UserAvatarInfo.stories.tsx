@@ -37,6 +37,10 @@ const meta: Meta = {
   args: {
     isOnline: false,
   },
+  parameters: {
+    type: "figma",
+    url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=329-201105&mode=design&t=0pofMbZEfin42GC7-4",
+  },
 };
 
 export default meta;

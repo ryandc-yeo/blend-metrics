@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui";
+import { User } from "lucide-react";
 
 const meta: Meta = {
   component: Avatar,
@@ -15,6 +16,12 @@ const meta: Meta = {
   },
   args: {
     isOnline: true,
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=397-201204&mode=design&t=0pofMbZEfin42GC7-4",
+    },
   },
 };
 
@@ -98,6 +105,26 @@ export const DoubleXl: Story = {
       <Avatar {...args}>
         <AvatarImage src="/man.jpg" alt="Man" />
         <AvatarFallback>M</AvatarFallback>
+      </Avatar>
+    );
+  },
+};
+
+export const Fallback: Story = {
+  argTypes: {
+    size: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  render: (args) => {
+    return (
+      <Avatar {...args}>
+        <AvatarImage src="/boy.jpg" alt="Boy" />
+        <AvatarFallback>
+          <User size={20} />
+        </AvatarFallback>
       </Avatar>
     );
   },

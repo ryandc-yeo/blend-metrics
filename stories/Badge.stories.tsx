@@ -43,13 +43,13 @@ export default meta;
 
 type Story = StoryObj<typeof Badge>;
 
-export const Default: Story = {
+export const Base: Story = {
   render: (args) => {
     return <Badge {...args}>Label</Badge>;
   },
 };
 
-export const WithDotIcon: Story = {
+export const DotIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
@@ -60,7 +60,7 @@ export const WithDotIcon: Story = {
   },
 };
 
-export const WithArrowRightIcon: Story = {
+export const ArrowRightIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
@@ -71,7 +71,7 @@ export const WithArrowRightIcon: Story = {
   },
 };
 
-export const WithArrowUpIcon: Story = {
+export const ArrowUpIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
@@ -82,7 +82,7 @@ export const WithArrowUpIcon: Story = {
   },
 };
 
-export const WithXIcon: Story = {
+export const XIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
@@ -93,7 +93,7 @@ export const WithXIcon: Story = {
   },
 };
 
-export const WithPlusIcon: Story = {
+export const PlusIcon: Story = {
   args: {
     shape: "circle",
   },
@@ -106,7 +106,7 @@ export const WithPlusIcon: Story = {
   },
 };
 
-export const WithAvatar: Story = {
+export const AvatarIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>

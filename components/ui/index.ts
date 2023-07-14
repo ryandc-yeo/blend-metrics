@@ -7,3 +7,4 @@ export * from "./switch";
 export * from "./dropdown-menu";
 export * from "./tooltip";
 export * from "./avatar";
+export * from "./helper-text";

@@ -16,14 +16,14 @@ const checkboxVariants = cva(
         md: "h-5 w-5",
         lg: "h-6 w-6",
       },
-      intent: {
+      variant: {
         rounded: "rounded-[5px]",
-        circle: "rounded-full",
+        circular: "rounded-full",
       },
     },
     defaultVariants: {
       size: "sm",
-      intent: "rounded",
+      variant: "rounded",
     },
   }
 );
@@ -48,10 +48,10 @@ interface CheckboxProps
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   CheckboxProps
->(({ className, size, intent, ...props }, ref) => {
+>(({ className, size, variant, ...props }, ref) => {
   return (
     <CheckboxPrimitive.Root
-      className={cn(checkboxVariants({ size, intent, className }))}
+      className={cn(checkboxVariants({ size, variant, className }))}
       {...props}
       ref={ref}
     >

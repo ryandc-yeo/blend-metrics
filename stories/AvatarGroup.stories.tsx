@@ -84,54 +84,42 @@ export const Xs: Story = {
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
           </TooltipContent>
         </Tooltip>
@@ -185,54 +173,42 @@ export const Sm: Story = {
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
           </TooltipContent>
         </Tooltip>
@@ -287,54 +263,42 @@ export const Md: Story = {
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
             <div className="flex items-center gap-x-2">
               <Avatar>
                 <AvatarImage src="/woman.jpg" alt="Woman" />
                 <AvatarFallback>W</AvatarFallback>
               </Avatar>
-              <span className="text-xs font-medium leading-5 text-white">
-                Woman
-              </span>
+              <span className="text-xs font-medium leading-5">Woman</span>
             </div>
           </TooltipContent>
         </Tooltip>

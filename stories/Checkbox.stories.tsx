@@ -11,7 +11,7 @@ const meta: Meta = {
     },
     intent: {
       control: "select",
-      options: ["rounded", "circle"],
+      options: ["rounded", "circular"],
     },
     disabled: {
       control: "boolean",

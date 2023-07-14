@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage, Badge } from "@/components/ui";
 const meta: Meta = {
   component: Badge,
   argTypes: {
-    colorScheme: {
+    visual: {
       control: "select",
       options: [
         "gray",
@@ -26,9 +26,9 @@ const meta: Meta = {
       control: "select",
       options: ["sm", "md", "lg"],
     },
-    shape: {
+    variant: {
       control: "select",
-      options: ["square", "circle"],
+      options: ["rounded", "circular"],
     },
   },
   parameters: {
@@ -95,7 +95,7 @@ export const XIcon: Story = {
 
 export const PlusIcon: Story = {
   args: {
-    shape: "circle",
+    variant: "circular",
   },
   render: (args) => {
     return (

@@ -7,7 +7,7 @@ const badgeVariants = cva(
   "inline-flex items-center justify-center gap-x-1.5 font-medium rounded-full",
   {
     variants: {
-      colorScheme: {
+      visual: {
         gray: "bg-gray-100 text-gray-700",
         purple: "bg-purple-100 text-purple-700",
         error: "bg-error-100 text-error-700",
@@ -25,37 +25,37 @@ const badgeVariants = cva(
         md: "h-6 text-sm leading-5",
         lg: "h-7 text-sm leading-5",
       },
-      shape: {
-        square: "py-0.5 px-2",
-        circle: "p-1",
+      variant: {
+        rounded: "py-0.5 px-2",
+        circular: "p-1",
       },
     },
     compoundVariants: [
       {
-        shape: "square",
+        variant: "rounded",
         size: "md",
         className: "py-0.5 px-2.5",
       },
       {
-        shape: "square",
+        variant: "rounded",
         size: "lg",
         className: "py-1 px-3 ",
       },
       {
-        shape: "circle",
+        variant: "circular",
         size: "md",
         className: "p-1.5",
       },
       {
-        shape: "circle",
+        variant: "circular",
         size: "lg",
         className: "p-2",
       },
     ],
     defaultVariants: {
-      colorScheme: "gray",
+      visual: "gray",
       size: "sm",
-      shape: "square",
+      variant: "rounded",
     },
   }
 );
@@ -64,10 +64,10 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-function Badge({ className, colorScheme, size, shape, ...props }: BadgeProps) {
+function Badge({ className, visual, size, variant, ...props }: BadgeProps) {
   return (
     <div
-      className={cn(badgeVariants({ colorScheme, size, shape, className }))}
+      className={cn(badgeVariants({ visual, size, variant, className }))}
       {...props}
     />
   );

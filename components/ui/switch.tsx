@@ -15,14 +15,14 @@ const switchVariants = cva(
         md: "h-6 w-11",
         lg: "h-7 w-[52px]",
       },
-      colorScheme: {
+      visual: {
         blue: "bg-gray-200 hover:bg-primary-100 focus:ring-primary-50 focus:ring-offset-primary-50 data-[state=checked]:bg-primary-500",
         gray: "bg-gray-100 hover:bg-gray-200 focus:ring-gray-100 focus:ring-offset-gray-100 data-[state=checked]:bg-gray-300",
       },
     },
     defaultVariants: {
       size: "sm",
-      colorScheme: "blue",
+      visual: "blue",
     },
   }
 );
@@ -64,10 +64,10 @@ interface SwitchProps
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   SwitchProps
->(({ className, size, colorScheme, ...props }, ref) => {
+>(({ className, size, visual, ...props }, ref) => {
   return (
     <SwitchPrimitives.Root
-      className={cn(switchVariants({ size, colorScheme, className }))}
+      className={cn(switchVariants({ size, visual, className }))}
       {...props}
       ref={ref}
     >

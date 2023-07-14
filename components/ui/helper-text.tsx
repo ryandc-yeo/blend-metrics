@@ -22,8 +22,12 @@ interface HelperTextProps
   extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof helperTextVariants> {}
 
-const HelperText = ({ className, size, ...props }: HelperTextProps) => (
-  <span className={cn(helperTextVariants({ size, className }))} {...props} />
+const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(
+  ({ className, size, ...props }) => (
+    <span className={cn(helperTextVariants({ size, className }))} {...props} />
+  )
 );
+
+HelperText.displayName = "HelperText";
 
 export { HelperText };

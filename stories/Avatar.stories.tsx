@@ -149,7 +149,9 @@ export const TooltipVariant: Story = {
               <AvatarFallback>M</AvatarFallback>
             </Avatar>
           </TooltipTrigger>
-          <TooltipContent>This is a tooltip</TooltipContent>
+          <TooltipContent className="text-xs font-semibold leading-[18px]">
+            This is a tooltip
+          </TooltipContent>
         </Tooltip>
       </TooltipProvider>
     );

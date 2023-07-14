@@ -9,7 +9,7 @@ const meta: Meta = {
       control: "select",
       options: ["sm", "md", "lg"],
     },
-    colorScheme: {
+    visual: {
       control: "select",
       options: ["blue", "gray"],
     },

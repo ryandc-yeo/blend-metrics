@@ -110,7 +110,7 @@ export const WithAvatar: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
-        <Avatar className="h-4 w-4">
+        <Avatar className="h-4 w-4 hover:ring-0">
           <AvatarImage src="/woman.jpg" alt="Woman" />
           <AvatarFallback>W</AvatarFallback>
         </Avatar>

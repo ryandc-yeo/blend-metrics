@@ -1,7 +1,15 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  TooltipProvider,
+  Tooltip,
+  TooltipContent,
+} from "@/components/ui";
 import { User } from "lucide-react";
+import { TooltipTrigger } from "@radix-ui/react-tooltip";
 
 const meta: Meta = {
   component: Avatar,
@@ -126,6 +134,24 @@ export const Fallback: Story = {
           <User size={20} />
         </AvatarFallback>
       </Avatar>
+    );
+  },
+};
+
+export const TooltipVariant: Story = {
+  render: (args) => {
+    return (
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger>
+            <Avatar {...args}>
+              <AvatarImage src="/man.jpg" alt="Man" />
+              <AvatarFallback>M</AvatarFallback>
+            </Avatar>
+          </TooltipTrigger>
+          <TooltipContent>This is a tooltip</TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     );
   },
 };

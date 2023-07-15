@@ -11,6 +11,7 @@ import {
 } from "@/components/ui";
 
 const meta: Meta = {
+  title: "DropdownMenu",
   component: DropdownMenu,
 };
 

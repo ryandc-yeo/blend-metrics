@@ -12,6 +12,7 @@ import {
 } from "@/components/ui";
 
 const meta: Meta = {
+  title: "AvatarGroup",
   component: AvatarGroup,
   argTypes: {
     size: {

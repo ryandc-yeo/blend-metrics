@@ -12,6 +12,7 @@ import { User } from "lucide-react";
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
 
 const meta: Meta = {
+  title: "Avatar",
   component: Avatar,
   argTypes: {
     size: {

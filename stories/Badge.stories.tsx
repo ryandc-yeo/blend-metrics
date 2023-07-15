@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUp, Dot, Plus, X } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage, Badge } from "@/components/ui";
 
 const meta: Meta = {
+  title: "Badge",
   component: Badge,
   argTypes: {
     visual: {

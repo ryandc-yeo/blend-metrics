@@ -9,6 +9,7 @@ import {
 } from "@/components/ui";
 
 const meta: Meta = {
+  title: "Tooltip",
   component: TooltipContent,
   argTypes: {
     size: {

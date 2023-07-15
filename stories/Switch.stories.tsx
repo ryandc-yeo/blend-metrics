@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Switch, Label, HelperText } from "@/components/ui";
 
 const meta: Meta = {
+  title: "Switch",
   component: Switch,
   argTypes: {
     size: {

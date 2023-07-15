@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { HelperText, Label, RadioGroup, RadioGroupItem } from "@/components/ui";
 
 const meta: Meta = {
+  title: "RadioGroup",
   component: RadioGroup,
 };
 

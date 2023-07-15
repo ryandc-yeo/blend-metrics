@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { HelperText, Label, CheckboxGroup, Checkbox } from "@/components/ui";
 
 const meta: Meta = {
+  title: "Checkbox",
   component: CheckboxGroup,
 };
 

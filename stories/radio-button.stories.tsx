@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { RadioGroup, RadioGroupItem } from "@/components/ui";
+import { RadioGroup, RadioButton } from "@/components/ui";
 
 const meta: Meta = {
-  title: "RadioGroupItem",
-  component: RadioGroupItem,
+  title: "RadioButton",
+  component: RadioButton,
   argTypes: {
     size: {
       control: "select",
@@ -28,7 +28,7 @@ const meta: Meta = {
   },
 };
 
-type Story = StoryObj<typeof RadioGroupItem>;
+type Story = StoryObj<typeof RadioButton>;
 
 export default meta;
 
@@ -39,7 +39,7 @@ export const Sm: Story = {
   render: (args) => {
     return (
       <RadioGroup>
-        <RadioGroupItem {...args} />
+        <RadioButton {...args} />
       </RadioGroup>
     );
   },
@@ -53,7 +53,7 @@ export const Md: Story = {
   render: (args) => {
     return (
       <RadioGroup>
-        <RadioGroupItem {...args} />
+        <RadioButton {...args} />
       </RadioGroup>
     );
   },
@@ -67,7 +67,7 @@ export const Lg: Story = {
   render: (args) => {
     return (
       <RadioGroup>
-        <RadioGroupItem {...args} />
+        <RadioButton {...args} />
       </RadioGroup>
     );
   },

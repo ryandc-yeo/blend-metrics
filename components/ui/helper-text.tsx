@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 const helperTextVariants = cva("inline-block font-normal text-gray-500", {
   variants: {
     size: {
+      xs: "text-xs",
       sm: "text-sm",
       md: "text-base",
       lg: "text-[18px] leading-7",

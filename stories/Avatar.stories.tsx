@@ -21,15 +21,14 @@ const meta: Meta = {
     isOnline: {
       control: "boolean",
     },
+    badgeClassName: {
+      table: {
+        disable: true,
+      },
+    },
   },
   args: {
     isOnline: true,
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=397-201204&mode=design&t=0pofMbZEfin42GC7-4",
-    },
   },
 };
 
@@ -46,6 +45,12 @@ export const Xs: Story = {
       </Avatar>
     );
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=397-201204&mode=design&t=0pofMbZEfin42GC7-4",
+    },
+  },
 };
 
 export const Sm: Story = {
@@ -59,6 +64,9 @@ export const Sm: Story = {
         <AvatarFallback>M</AvatarFallback>
       </Avatar>
     );
+  },
+  parameters: {
+    ...Xs.parameters,
   },
 };
 
@@ -74,6 +82,9 @@ export const Md: Story = {
       </Avatar>
     );
   },
+  parameters: {
+    ...Xs.parameters,
+  },
 };
 
 export const Lg: Story = {
@@ -87,6 +98,9 @@ export const Lg: Story = {
         <AvatarFallback>M</AvatarFallback>
       </Avatar>
     );
+  },
+  parameters: {
+    ...Xs.parameters,
   },
 };
 
@@ -102,6 +116,9 @@ export const Xl: Story = {
       </Avatar>
     );
   },
+  parameters: {
+    ...Xs.parameters,
+  },
 };
 
 export const DoubleXl: Story = {
@@ -115,6 +132,9 @@ export const DoubleXl: Story = {
         <AvatarFallback>M</AvatarFallback>
       </Avatar>
     );
+  },
+  parameters: {
+    ...Xs.parameters,
   },
 };
 
@@ -136,6 +156,9 @@ export const Fallback: Story = {
       </Avatar>
     );
   },
+  parameters: {
+    ...Xs.parameters,
+  },
 };
 
 export const TooltipVariant: Story = {
@@ -155,6 +178,12 @@ export const TooltipVariant: Story = {
         </Tooltip>
       </TooltipProvider>
     );
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=297-201536&mode=design&t=yD9NNpLMSJVswdhY-4",
+    },
   },
 };
 
@@ -184,6 +213,12 @@ export const XsDetailed: Story = {
       </div>
     );
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=329-201105&mode=design&t=yD9NNpLMSJVswdhY-4",
+    },
+  },
 };
 
 export const SmDetailed: Story = {
@@ -211,6 +246,9 @@ export const SmDetailed: Story = {
       </div>
     );
   },
+  parameters: {
+    ...XsDetailed.parameters,
+  },
 };
 
 export const MdDetailed: Story = {
@@ -235,6 +273,9 @@ export const MdDetailed: Story = {
         </div>
       </div>
     );
+  },
+  parameters: {
+    ...XsDetailed.parameters,
   },
 };
 
@@ -263,6 +304,9 @@ export const LgDetailed: Story = {
       </div>
     );
   },
+  parameters: {
+    ...XsDetailed.parameters,
+  },
 };
 
 export const XlDetailed: Story = {
@@ -289,5 +333,8 @@ export const XlDetailed: Story = {
         </div>
       </div>
     );
+  },
+  parameters: {
+    ...XsDetailed.parameters,
   },
 };

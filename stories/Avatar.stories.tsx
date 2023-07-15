@@ -157,3 +157,137 @@ export const TooltipVariant: Story = {
     );
   },
 };
+
+export const XsDetailed: Story = {
+  argTypes: {
+    size: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  render: (args) => {
+    return (
+      <div className="inline-flex items-center gap-x-2">
+        <Avatar {...args}>
+          <AvatarImage src="/Man.jpg" alt="Man" />
+          <AvatarFallback>M</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col">
+          <span className="text-xs font-semibold leading-[15px] text-gray-700">
+            Christopher Torres
+          </span>
+          <span className="text-[9px] leading-[14px] text-gray-500">
+            chris@blendmetrics.com
+          </span>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const SmDetailed: Story = {
+  args: {
+    size: "sm",
+  },
+  argTypes: {
+    ...XsDetailed.argTypes,
+  },
+  render: (args) => {
+    return (
+      <div className="inline-flex items-center gap-x-2.5">
+        <Avatar {...args}>
+          <AvatarImage src="/Man.jpg" alt="Man" />
+          <AvatarFallback>M</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col">
+          <span className="text-sm font-semibold text-gray-700">
+            Christopher Torres
+          </span>
+          <span className="text-xs leading-[18px] text-gray-500">
+            chris@blendmetrics.com
+          </span>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const MdDetailed: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    ...XsDetailed.argTypes,
+  },
+  render: (args) => {
+    return (
+      <div className="inline-flex items-center gap-x-3">
+        <Avatar {...args}>
+          <AvatarImage src="/Man.jpg" alt="Man" />
+          <AvatarFallback>M</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col">
+          <span className="text-sm font-semibold text-gray-700">
+            Christopher Torres
+          </span>
+          <span className="text-sm text-gray-500">chris@blendmetrics.com</span>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const LgDetailed: Story = {
+  args: {
+    size: "lg",
+  },
+  argTypes: {
+    ...XsDetailed.argTypes,
+  },
+  render: (args) => {
+    return (
+      <div className="inline-flex items-center gap-x-3">
+        <Avatar {...args}>
+          <AvatarImage src="/Man.jpg" alt="Man" />
+          <AvatarFallback>M</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col">
+          <span className="text-base font-semibold text-gray-700">
+            Christopher Torres
+          </span>
+          <span className="text-base text-gray-500">
+            chris@blendmetrics.com
+          </span>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const XlDetailed: Story = {
+  args: {
+    size: "xl",
+  },
+  argTypes: {
+    ...XsDetailed.argTypes,
+  },
+  render: (args) => {
+    return (
+      <div className="inline-flex items-center gap-x-3">
+        <Avatar {...args}>
+          <AvatarImage src="/Man.jpg" alt="Man" />
+          <AvatarFallback>M</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col">
+          <span className="text-[18px] font-semibold leading-7 text-gray-700">
+            Christopher Torres
+          </span>
+          <span className="text-[18px] leading-6 text-gray-500">
+            chris@blendmetrics.com
+          </span>
+        </div>
+      </div>
+    );
+  },
+};

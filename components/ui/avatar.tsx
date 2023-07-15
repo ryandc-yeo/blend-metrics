@@ -25,7 +25,7 @@ const avatarVariants = cva(
   }
 );
 
-const IconVariants = cva(
+const badgeVariants = cva(
   "absolute inline-block rounded-full -bottom-[1.5px] -right-[1.5px] border-[1.5px] border-white bg-success-500",
   {
     variants: {
@@ -48,19 +48,22 @@ interface AvatarProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,
     VariantProps<typeof avatarVariants> {
   isOnline?: boolean;
+  badgeClassName?: string;
 }
 
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   AvatarProps
->(({ className, size, isOnline, ...props }, ref) => (
+>(({ className, size, isOnline, badgeClassName, ...props }, ref) => (
   <div className="relative inline-block">
     <AvatarPrimitive.Root
       ref={ref}
       className={cn(avatarVariants({ size, className }))}
       {...props}
     />
-    {isOnline && <span className={IconVariants({ size })} />}
+    {isOnline && (
+      <span className={badgeVariants({ size, className: badgeClassName })} />
+    )}
   </div>
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;

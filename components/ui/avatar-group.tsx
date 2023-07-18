@@ -59,7 +59,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
         ref={ref}
       >
         {reversedChildren}
-        {excess && (
+        {excess !== 0 && (
           <span
             className={excessVariants({ size, className: excessClassName })}
           >

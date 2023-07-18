@@ -77,7 +77,7 @@ export const Xs: Story = {
             </AvatarGroup>
           </TooltipTrigger>
           <TooltipContent
-            className="h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
+            className="max-h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             size="md"
           >
             <div className="flex items-center gap-x-2">
@@ -166,7 +166,7 @@ export const Sm: Story = {
             </AvatarGroup>
           </TooltipTrigger>
           <TooltipContent
-            className="h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
+            className="max-h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             size="md"
           >
             <div className="flex items-center gap-x-2">
@@ -256,7 +256,7 @@ export const Md: Story = {
           </TooltipTrigger>
 
           <TooltipContent
-            className="h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
+            className="max-h-[192px] space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             size="md"
           >
             <div className="flex items-center gap-x-2">

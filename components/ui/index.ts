@@ -10,3 +10,4 @@ export * from "./avatar";
 export * from "./helper-text";
 export * from "./checkbox-group";
 export * from "./avatar-group";
+export * from "./card";

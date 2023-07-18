@@ -75,14 +75,14 @@ const DropdownMenuContent = React.forwardRef<
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 
-const dropdownMenuContentVariants = cva(
+const dropdownMenuItemVariants = cva(
   "relative flex cursor-default select-none items-center px-3 py-2.5 text-[13px] leading-[13px] outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "text-gray-500 hover:bg-gray-50 hover:text-gray-black focus:text-gray-black focus:bg-gray-50",
-        destructive: "text-error-600 hover:bg-error-50 focus:bg-error-50",
+          "text-gray-500 hover:bg-gray-50 hover:text-gray-black focus:text-gray-black focus:bg-gray-100",
+        destructive: "text-error-600 hover:bg-error-50 focus:bg-error-100",
       },
     },
     defaultVariants: {
@@ -93,7 +93,7 @@ const dropdownMenuContentVariants = cva(
 
 interface DropdownMenuItemProps
   extends React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item>,
-    VariantProps<typeof dropdownMenuContentVariants> {
+    VariantProps<typeof dropdownMenuItemVariants> {
   inset?: boolean;
 }
 
@@ -104,7 +104,7 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      dropdownMenuContentVariants({ variant, className }),
+      dropdownMenuItemVariants({ variant, className }),
       inset && "pl-8",
       className
     )}

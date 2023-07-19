@@ -9,7 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-viewport",
     "@storybook/addon-measure",
     "@storybook/addon-docs",
-    "storybook-addon-designs",
+    "@storybook/addon-designs",
     "@storybook/addon-mdx-gfm",
   ],
   framework: {

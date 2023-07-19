@@ -1,7 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { Inter } from "next/font/google";
-import { withDesign } from "storybook-addon-designs";
 
 import "@/app/globals.css";
 
@@ -26,7 +25,6 @@ const preview: Preview = {
         <Story />
       </div>
     ),
-    withDesign,
   ],
   argTypes: {
     asChild: {

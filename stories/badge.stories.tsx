@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ArrowRight, ArrowUp, Dot, Plus, X } from "lucide-react";
 
+import { ArrowRight, ArrowUp, Dot, Plus, X } from "@/components/icons";
 import { Avatar, AvatarFallback, AvatarImage, Badge } from "@/components/ui";
 
 const meta: Meta = {
@@ -54,7 +54,7 @@ export const DotIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
-        <Dot size={12} className="stroke-[6px]" />
+        <Dot />
         Label
       </Badge>
     );
@@ -66,7 +66,7 @@ export const ArrowRightIcon: Story = {
     return (
       <Badge {...args}>
         Label
-        <ArrowRight size={12} />
+        <ArrowRight />
       </Badge>
     );
   },
@@ -76,7 +76,7 @@ export const ArrowUpIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
-        <ArrowUp size={12} />
+        <ArrowUp />
         Label
       </Badge>
     );
@@ -88,7 +88,7 @@ export const XIcon: Story = {
     return (
       <Badge {...args}>
         Label
-        <X size={12} />
+        <X />
       </Badge>
     );
   },
@@ -101,7 +101,7 @@ export const PlusIcon: Story = {
   render: (args) => {
     return (
       <Badge {...args}>
-        <Plus size={12} />
+        <Plus />
       </Badge>
     );
   },

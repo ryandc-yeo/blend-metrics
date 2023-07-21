@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-import { GoogleSheet } from "../icons";
-import { Switch } from "./switch";
 
 export const Card = ({
   className,

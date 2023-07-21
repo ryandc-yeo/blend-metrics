@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export const FolderClosed2 = ({
+export const FolderClosed = ({
   className,
   ...props
 }: React.SVGProps<SVGSVGElement>) => {

@@ -1,22 +1,20 @@
 import { Meta, StoryObj } from "@storybook/react";
-import {
-  ArrowDownToLine,
-  Copy,
-  Edit3,
-  Link,
-  MoreHorizontal,
-  Star,
-  UserPlus,
-  Zap,
-  Trash2,
-  User,
-} from "lucide-react";
 
 import {
-  FolderClosed2,
+  FolderClosed,
   GoogleSheet,
-  History2,
-  Copy2,
+  History,
+  PenSquare,
+  Edit,
+  Copy,
+  MoreHorizontal,
+  UserPlus,
+  Zap,
+  Trash,
+  User,
+  ArrowDownToLine,
+  Link,
+  Star,
 } from "@/components/icons";
 import {
   Avatar,
@@ -183,48 +181,48 @@ export const AvatarGroupDefaultVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -234,7 +232,7 @@ export const AvatarGroupDefaultVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -262,48 +260,48 @@ export const NoAssignedUsersDefaultVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -313,7 +311,7 @@ export const NoAssignedUsersDefaultVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -368,48 +366,48 @@ export const AvatarIndividualVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -419,7 +417,7 @@ export const AvatarIndividualVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -447,48 +445,48 @@ export const NoAssignedUsersIndividualVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -498,7 +496,7 @@ export const NoAssignedUsersIndividualVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -623,48 +621,48 @@ export const AvatarGroupCustomVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -674,7 +672,7 @@ export const AvatarGroupCustomVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -702,48 +700,48 @@ export const NoAssignedUsersCustomVariant: Story = {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-            <MoreHorizontal size={15} />
+            <MoreHorizontal />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="min-w-[182px]">
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Edit3 size={16} />
+              <Edit />
               Option 1
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy size={16} />
+              <Copy />
               Option 2
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Link size={16} />
+              <Link />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <UserPlus size={16} />
+              <UserPlus />
               Option 3
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Zap size={16} />
+              <Zap />
               Option 4
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Copy2 />
+              <PenSquare />
               Option 5
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <Star size={16} />
+              <Star />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <FolderClosed2 />
+              <FolderClosed />
               Option 6
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <History2 />
+              <History />
               Option 7
             </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-x-2">
-              <ArrowDownToLine size={16} />
+              <ArrowDownToLine />
               Option 8
             </DropdownMenuItem>
 
@@ -753,7 +751,7 @@ export const NoAssignedUsersCustomVariant: Story = {
               className="flex items-center gap-x-2"
               variant="destructive"
             >
-              <Trash2 size={16} />
+              <Trash />
               Delete item
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -790,48 +788,48 @@ export const AvatarDetailedDefaultVariant: Story = {
 
       <DropdownMenu>
         <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-          <MoreHorizontal size={15} />
+          <MoreHorizontal />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent className="min-w-[182px]">
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             Option 1
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Copy size={16} />
+            <Copy />
             Option 2
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Link size={16} />
+            <Link />
             Option 3
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <UserPlus size={16} />
+            <UserPlus />
             Option 3
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Zap size={16} />
+            <Zap />
             Option 4
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Copy2 />
+            <PenSquare />
             Option 5
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Star size={16} />
+            <Star />
             Option 6
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <FolderClosed2 />
+            <FolderClosed />
             Option 6
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <History2 />
+            <History />
             Option 7
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <ArrowDownToLine size={16} />
+            <ArrowDownToLine />
             Option 8
           </DropdownMenuItem>
 
@@ -841,7 +839,7 @@ export const AvatarDetailedDefaultVariant: Story = {
             className="flex items-center gap-x-2"
             variant="destructive"
           >
-            <Trash2 size={16} />
+            <Trash />
             Delete item
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -857,7 +855,7 @@ export const AvatarFallbackDefaultVariant: Story = {
         <Avatar size="md">
           <AvatarImage src="/boy.jpg" alt="Boy" />
           <AvatarFallback>
-            <User size={20} />
+            <User className="h-6 w-6" />
           </AvatarFallback>
         </Avatar>
 
@@ -875,48 +873,48 @@ export const AvatarFallbackDefaultVariant: Story = {
 
       <DropdownMenu>
         <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-          <MoreHorizontal size={15} />
+          <MoreHorizontal />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent className="min-w-[182px]">
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             Option 1
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Copy size={16} />
+            <Copy />
             Option 2
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Link size={16} />
+            <Link />
             Option 3
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <UserPlus size={16} />
+            <UserPlus />
             Option 3
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Zap size={16} />
+            <Zap />
             Option 4
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Copy2 />
+            <PenSquare />
             Option 5
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Star size={16} />
+            <Star />
             Option 6
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <FolderClosed2 />
+            <FolderClosed />
             Option 6
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <History2 />
+            <History />
             Option 7
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <ArrowDownToLine size={16} />
+            <ArrowDownToLine />
             Option 8
           </DropdownMenuItem>
 
@@ -926,7 +924,7 @@ export const AvatarFallbackDefaultVariant: Story = {
             className="flex items-center gap-x-2"
             variant="destructive"
           >
-            <Trash2 size={16} />
+            <Trash />
             Delete item
           </DropdownMenuItem>
         </DropdownMenuContent>

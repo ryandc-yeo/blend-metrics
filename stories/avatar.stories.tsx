@@ -7,9 +7,9 @@ import {
   TooltipProvider,
   Tooltip,
   TooltipContent,
+  TooltipTrigger,
 } from "@/components/ui";
-import { User } from "lucide-react";
-import { TooltipTrigger } from "@radix-ui/react-tooltip";
+import { User } from "@/components/icons";
 
 const meta: Meta = {
   title: "Avatar",
@@ -152,7 +152,7 @@ export const Fallback: Story = {
       <Avatar {...args}>
         <AvatarImage src="/boy.jpg" alt="Boy" />
         <AvatarFallback>
-          <User size={20} />
+          <User />
         </AvatarFallback>
       </Avatar>
     );

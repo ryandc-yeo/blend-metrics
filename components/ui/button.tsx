@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-x-2 rounded-md text-sm font-semibold transition-colors focus:ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-x-2 rounded-md font-semibold transition-colors focus:ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       visual: {
@@ -14,87 +14,95 @@ const buttonVariants = cva(
         gray: "",
       },
       variant: {
-        solid: "",
+        filled: "",
         outlined: "border",
         ghost: "",
         link: "hover:underline",
-        secondary: "",
+        light: "",
       },
       size: {
-        sm: "py-2 px-[14px] h-9",
-        md: "py-2.5 px-4 h-10",
-        lg: "py-2.5 px-[18px] h-11",
-        xl: "py-3 px-5 h-12",
-        "2xl": "px-7 py-4 h-[60px]",
+        sm: "text-sm py-2 px-[14px] h-9",
+        md: "text-sm py-2.5 px-4 h-10",
+        lg: "text-base py-2.5 px-[18px] h-11",
+        xl: "text-base py-3 px-5 h-12",
+        "2xl": "text-[18px] leading-[28px] px-7 py-4 h-[60px]",
       },
     },
     compoundVariants: [
       {
-        variant: "solid",
-        visual: "error",
-        className:
-          "text-white bg-error-500 hover:bg-error-600 focus:ring-error-100",
+        variant: "filled",
+        className: "shadow-xs",
       },
       {
         variant: "outlined",
-        visual: "error",
-        className:
-          "border-error-300 text-error-500 hover:bg-red-100 focus:ring-error-50",
+        className: "shadow-xs",
       },
       {
-        variant: "ghost",
-        visual: "error",
-        className:
-          "text-error-500 hover:bg-error-100 focus:text-error-700 focus:bg-error-200 focus:ring-0",
-      },
-      {
-        variant: "link",
-        visual: "error",
-        className: "text-error-500 focus:text-error-600 focus:ring-0",
-      },
-      {
-        variant: "secondary",
-        visual: "error",
-        className:
-          "text-error-500 bg-error-100 hover:bg-error-200 focus:ring-error-50",
-      },
-      {
-        variant: "solid",
         visual: "primary",
+        variant: "filled",
         className:
           "text-white bg-primary-500 hover:bg-primary-600 focus:ring-primary-100",
       },
       {
-        variant: "secondary",
         visual: "primary",
+        variant: "light",
         className:
-          "text-primary-500 bg-primary-100 hover:bg-primary-200 focus:ring-primary-25",
+          "text-primary-500 bg-primary-50 hover:bg-primary-100 focus:ring-primary-25",
       },
       {
+        visual: "primary",
         variant: "link",
-        visual: "primary",
-        className: "text-primary-500 focus:text-primary-600 focus:ring-0",
+        className: "text-primary-500 focus:text-primary-700 focus:ring-0",
       },
       {
+        visual: "primary",
         variant: "ghost",
-        visual: "primary",
         className:
-          "text-primary-500 hover:bg-primary-100 focus:bg-primary-200 focus:text-primary-600 focus:ring-0",
+          "text-primary-500 hover:bg-primary-50 focus:bg-primary-100 focus:text-primary-700 focus:ring-0",
       },
       {
+        visual: "error",
+        variant: "filled",
+        className:
+          "text-white bg-error-500 hover:bg-error-600 focus:ring-error-200",
+      },
+      {
+        visual: "error",
         variant: "outlined",
+        className:
+          "border-error-300 text-error-500 hover:bg-red-50 focus:ring-error-25",
+      },
+      {
+        visual: "error",
+        variant: "ghost",
+        className:
+          "text-error-500 hover:bg-error-50 focus:text-error-700 focus:bg-error-100 focus:ring-0",
+      },
+      {
+        visual: "error",
+        variant: "link",
+        className: "text-error-500 focus:text-error-700 focus:ring-0",
+      },
+      {
+        visual: "error",
+        variant: "light",
+        className:
+          "text-error-500 bg-error-50 hover:bg-error-100 focus:ring-error-100",
+      },
+      {
         visual: "gray",
+        variant: "outlined",
         className: "border-gray-300 hover:bg-gray-50 focus:ring-gray-100",
       },
       {
-        variant: "ghost",
         visual: "gray",
+        variant: "ghost",
         className:
           "text-gray-800 hover:bg-gray-100 focus:bg-gray-200 focus:ring-0",
       },
       {
-        variant: "link",
         visual: "gray",
+        variant: "link",
         className: "text-gray-500 focus:text-gray-600 focus:ring-0",
       },
       {
@@ -103,7 +111,7 @@ const buttonVariants = cva(
       },
     ],
     defaultVariants: {
-      variant: "solid",
+      variant: "filled",
       size: "sm",
       visual: "primary",
     },

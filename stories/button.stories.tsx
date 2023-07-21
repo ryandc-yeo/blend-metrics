@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Dot, Figma, Plus } from "lucide-react";
 
 import {
   Apple,
@@ -17,6 +16,9 @@ import {
   Twitter,
   Twitter2,
   TwitterGray,
+  Dot,
+  Plus,
+  Figma,
 } from "@/components/icons";
 import { Button } from "@/components/ui";
 
@@ -37,7 +39,7 @@ const meta: Meta = {
     },
     variant: {
       control: "select",
-      options: ["solid", "secondary", "outlined", "ghost", "link"],
+      options: ["filled", "light", "outlined", "ghost", "link"],
     },
     size: {
       control: "select",
@@ -54,6 +56,18 @@ const meta: Meta = {
     disabled: false,
     children: "Button",
   },
+  parameters: {
+    design: [
+      {
+        type: "figma",
+        url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=2-10408&mode=design&t=Ea0S9qYy4iyxSyMa-4",
+      },
+      {
+        type: "figma",
+        url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=2-14104&mode=design&t=Ea0S9qYy4iyxSyMa-4",
+      },
+    ],
+  },
 };
 
 export default meta;
@@ -64,7 +78,7 @@ export const Primary: Story = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["solid", "secondary", "ghost", "link"],
+      options: ["filled", "light", "ghost", "link"],
     },
   },
 };
@@ -93,11 +107,11 @@ export const LeftIconPrimary: Story = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["solid", "secondary", "ghost", "link"],
+      options: ["filled", "light", "ghost", "link"],
     },
   },
   render: (args) => (
-    <Button {...args} leftIcon={<Plus size={15} />}>
+    <Button {...args} leftIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -109,7 +123,7 @@ export const LeftIconError: Story = {
   },
   argTypes: {},
   render: (args) => (
-    <Button {...args} leftIcon={<Plus size={15} />}>
+    <Button {...args} leftIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -127,7 +141,7 @@ export const LeftIconGray: Story = {
     },
   },
   render: (args) => (
-    <Button {...args} leftIcon={<Plus size={15} />}>
+    <Button {...args} leftIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -137,11 +151,11 @@ export const RightIconPrimary: Story = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["solid", "secondary", "ghost", "link"],
+      options: ["filled", "light", "ghost", "link"],
     },
   },
   render: (args) => (
-    <Button {...args} rightIcon={<Plus size={15} />}>
+    <Button {...args} rightIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -152,7 +166,7 @@ export const RightIconError: Story = {
     visual: "error",
   },
   render: (args) => (
-    <Button {...args} rightIcon={<Plus size={15} />}>
+    <Button {...args} rightIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -170,7 +184,7 @@ export const RightIconGray: Story = {
     },
   },
   render: (args) => (
-    <Button {...args} rightIcon={<Plus size={15} />}>
+    <Button {...args} rightIcon={<Plus />}>
       Button
     </Button>
   ),
@@ -180,11 +194,11 @@ export const DotIconPrimary: Story = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["solid", "secondary", "ghost", "link"],
+      options: ["filled", "light", "ghost", "link"],
     },
   },
   render: (args) => (
-    <Button {...args} leftIcon={<Dot className="stroke-[8px]" size={10} />}>
+    <Button {...args} leftIcon={<Dot />}>
       Button
     </Button>
   ),
@@ -195,7 +209,7 @@ export const DotIconError: Story = {
     visual: "error",
   },
   render: (args) => (
-    <Button {...args} leftIcon={<Dot className="stroke-[8px]" size={10} />}>
+    <Button {...args} leftIcon={<Dot />}>
       Button
     </Button>
   ),
@@ -213,7 +227,7 @@ export const DotIconGray: Story = {
     },
   },
   render: (args) => (
-    <Button {...args} leftIcon={<Dot className="stroke-[8px]" size={10} />}>
+    <Button {...args} leftIcon={<Dot />}>
       Button
     </Button>
   ),
@@ -231,7 +245,7 @@ export const GoogleOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3"
+      className="gap-x-3 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<Google />}
@@ -253,7 +267,7 @@ export const FacebookOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3"
+      className="gap-x-3 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<Facebook2 />}
@@ -275,7 +289,7 @@ export const AppleOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3"
+      className="gap-x-3 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<Apple2 />}
@@ -297,10 +311,32 @@ export const TwitterOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3"
+      className="gap-x-3 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<Twitter2 />}
+    >
+      Sign in with Twitter
+    </Button>
+  ),
+};
+
+export const FigmaOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="gap-x-3 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+      leftIcon={<Figma />}
     >
       Sign in with Twitter
     </Button>
@@ -319,7 +355,7 @@ export const DribbbleOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3"
+      className="gap-x-3 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<DribbbleCircle />}
@@ -329,7 +365,7 @@ export const DribbbleOutlined: Story = {
   ),
 };
 
-export const FacebookSolid: Story = {
+export const FacebookFilled: Story = {
   args: {
     size: "md",
   },
@@ -341,7 +377,7 @@ export const FacebookSolid: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="bg-[#1877F2] hover:bg-[#0C63D4] focus:ring-gray-100"
+      className="gap-x-3 bg-[#1877F2] hover:bg-[#0C63D4] focus:ring-gray-100"
       leftIcon={<Facebook />}
     >
       Sign in with Facebook
@@ -349,7 +385,7 @@ export const FacebookSolid: Story = {
   ),
 };
 
-export const AppleSolid: Story = {
+export const AppleFilled: Story = {
   args: {
     size: "md",
   },
@@ -361,7 +397,7 @@ export const AppleSolid: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="bg-[#000000] hover:bg-[#000000] focus:ring-gray-100"
+      className="gap-x-3 bg-black hover:bg-black focus:ring-gray-100"
       leftIcon={<Apple />}
     >
       Sign in with Twitter
@@ -369,7 +405,7 @@ export const AppleSolid: Story = {
   ),
 };
 
-export const TwitterSolid: Story = {
+export const TwitterFilled: Story = {
   args: {
     size: "md",
   },
@@ -381,7 +417,7 @@ export const TwitterSolid: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="bg-[#1DA1F2] hover:bg-[#0C8BD9] focus:ring-gray-100"
+      className="gap-x-3 bg-[#1DA1F2] hover:bg-[#0C8BD9] focus:ring-gray-100"
       leftIcon={<Twitter />}
     >
       Sign in with Twitter
@@ -389,7 +425,7 @@ export const TwitterSolid: Story = {
   ),
 };
 
-export const DribbbleSolid: Story = {
+export const FigmaFilled: Story = {
   args: {
     size: "md",
   },
@@ -401,7 +437,27 @@ export const DribbbleSolid: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="bg-[#EA4C89] hover:bg-[#E62872] focus:ring-gray-100"
+      className="gap-x-3 bg-black hover:bg-black focus:ring-gray-100"
+      leftIcon={<Figma />}
+    >
+      Sign in with Twitter
+    </Button>
+  ),
+};
+
+export const DribbbleFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="gap-x-3 bg-[#EA4C89] hover:bg-[#E62872] focus:ring-gray-100"
       leftIcon={<Dribbble />}
     >
       Sign in with Dribbble
@@ -421,7 +477,7 @@ export const GoogleGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<GoogleGray />}
@@ -443,7 +499,7 @@ export const FacebookGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<FacebookGray />}
@@ -465,7 +521,7 @@ export const AppleGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<AppleGray />}
@@ -487,7 +543,7 @@ export const TwitterGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<TwitterGray />}
@@ -509,7 +565,7 @@ export const FigmaGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<FigmaGray />}
@@ -531,12 +587,371 @@ export const DribbbleCircleGrayOutlined: Story = {
   render: (args) => (
     <Button
       {...args}
-      className="gap-x-3 text-gray-700"
+      className="gap-x-3 text-gray-700 focus:ring-gray-100"
       visual="gray"
       variant="outlined"
       leftIcon={<DribbbleCircleGray />}
     >
       Sign in with Dribbble
+    </Button>
+  ),
+};
+
+export const GoogleIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <Google />
+    </Button>
+  ),
+};
+
+export const FacebookIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <Facebook2 />
+    </Button>
+  ),
+};
+
+export const TwitterIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <Twitter2 />
+    </Button>
+  ),
+};
+
+export const FigmaIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <Figma />
+    </Button>
+  ),
+};
+
+export const DribbbleCircleIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <DribbbleCircle />
+    </Button>
+  ),
+};
+
+export const FacebookIconFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="bg-[#1877F2] px-2.5 hover:bg-[#0C63D4] focus:ring-gray-100"
+    >
+      <Facebook />
+    </Button>
+  ),
+};
+
+export const AppleIconFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="bg-black px-2.5 hover:bg-black focus:ring-gray-100"
+    >
+      <Apple />
+    </Button>
+  ),
+};
+
+export const TwitterIconFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="bg-[#1DA1F2] px-2.5 hover:bg-[#0C8BD9] focus:ring-gray-100"
+    >
+      <Twitter />
+    </Button>
+  ),
+};
+
+export const FigmaIconFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="bg-black px-2.5 hover:bg-black focus:ring-gray-100"
+    >
+      <Figma />
+    </Button>
+  ),
+};
+
+export const DribbbleIconFilled: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="bg-[#EA4C89] px-2.5 hover:bg-[#E62872] focus:ring-gray-100"
+    >
+      <Dribbble />
+    </Button>
+  ),
+};
+
+export const GoogleGrayIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <GoogleGray />
+    </Button>
+  ),
+};
+
+export const FacebookGrayIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: true,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <FacebookGray />
+    </Button>
+  ),
+};
+
+export const AppleGrayIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <AppleGray />
+    </Button>
+  ),
+};
+
+export const TwitterGrayIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <TwitterGray />
+    </Button>
+  ),
+};
+
+export const FigmaGrayIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <FigmaGray />
+    </Button>
+  ),
+};
+
+export const DribbbleCircleIconGrayOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <DribbbleCircleGray />
     </Button>
   ),
 };

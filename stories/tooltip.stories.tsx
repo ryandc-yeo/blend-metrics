@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { HelpCircle } from "lucide-react";
 
+import { HelpCircle } from "@/components/icons";
 import {
   Tooltip,
   TooltipContent,
@@ -33,7 +33,7 @@ export const Sm: Story = {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger className="text-gray-500">
-            <HelpCircle size={15} />
+            <HelpCircle />
           </TooltipTrigger>
           <TooltipContent
             className="text-xs leading-[18px] text-white"
@@ -56,7 +56,7 @@ export const Md: Story = {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger className="text-gray-500">
-            <HelpCircle size={15} />
+            <HelpCircle />
           </TooltipTrigger>
           <TooltipContent
             className="text-xs leading-[18px] text-white"

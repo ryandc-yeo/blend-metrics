@@ -1,19 +1,18 @@
-import * as React from "react";
 import { Meta, StoryObj } from "@storybook/react";
+
 import {
   MoreHorizontal,
-  Edit3,
+  Edit,
   Copy,
   Zap,
-  Trash2,
+  Trash,
   ChevronDown,
   User,
   Settings,
   UserPlus,
   HelpCircle,
   LogOut,
-} from "lucide-react";
-
+} from "@/components/icons";
 import {
   Avatar,
   AvatarFallback,
@@ -48,7 +47,7 @@ export const Base: Story = {
     return (
       <DropdownMenu {...args}>
         <DropdownMenuTrigger className="flex items-center justify-center gap-x-1 text-sm font-medium text-gray-900 focus-visible:outline-none">
-          Edit <ChevronDown className="text-gray-500" size={16} />
+          Edit <ChevronDown className="text-gray-500" />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent className="min-w-[202px]">
@@ -67,20 +66,20 @@ export const IconVariant: Story = {
     return (
       <DropdownMenu {...args}>
         <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-          <MoreHorizontal size={15} />
+          <MoreHorizontal />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Copy size={16} />
+            <Copy />
             Duplicate
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Zap size={16} />
+            <Zap />
             Run test
           </DropdownMenuItem>
           <DropdownMenuSeparator />
@@ -88,7 +87,7 @@ export const IconVariant: Story = {
             className="flex items-center gap-x-2"
             variant="destructive"
           >
-            <Trash2 size={16} />
+            <Trash />
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -107,21 +106,21 @@ export const ChevronDownShortcutVariant: Story = {
 
         <DropdownMenuContent className="min-w-[180px] py-1">
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
@@ -129,14 +128,14 @@ export const ChevronDownShortcutVariant: Story = {
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
@@ -147,7 +146,7 @@ export const ChevronDownShortcutVariant: Story = {
             className="flex items-center gap-x-2"
             variant="destructive"
           >
-            <Trash2 size={16} />
+            <Trash />
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -161,26 +160,26 @@ export const MoreShortcutVariant: Story = {
     return (
       <DropdownMenu {...args}>
         <DropdownMenuTrigger className="rounded-[5px] px-1.5 py-1 text-gray-500 hover:bg-gray-100 focus-visible:outline-none">
-          <MoreHorizontal size={15} />
+          <MoreHorizontal />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent className="min-w-[180px] py-1">
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
@@ -188,14 +187,14 @@ export const MoreShortcutVariant: Story = {
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Edit3 size={16} />
+            <Edit />
             <div className="flex flex-auto items-center justify-between">
               Edit
               <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
@@ -206,7 +205,7 @@ export const MoreShortcutVariant: Story = {
             className="flex items-center gap-x-2"
             variant="destructive"
           >
-            <Trash2 size={16} />
+            <Trash />
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -283,15 +282,15 @@ export const IconAvatarVariant: Story = {
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <User size={16} />
+            <User />
             View profile
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <Settings size={16} />
+            <Settings />
             Settings
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <UserPlus size={16} />
+            <UserPlus />
             Invite team member
           </DropdownMenuItem>
           <DropdownMenuSeparator />
@@ -300,14 +299,14 @@ export const IconAvatarVariant: Story = {
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <HelpCircle size={16} />
+            <HelpCircle />
             Support
           </DropdownMenuItem>
 
           <DropdownMenuSeparator />
 
           <DropdownMenuItem className="flex items-center gap-x-2">
-            <LogOut size={16} />
+            <LogOut />
             Log out
           </DropdownMenuItem>
         </DropdownMenuContent>

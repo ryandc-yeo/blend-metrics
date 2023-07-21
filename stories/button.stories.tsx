@@ -645,6 +645,30 @@ export const FacebookIconOutlined: Story = {
   ),
 };
 
+export const AppleIconOutlined: Story = {
+  args: {
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+    size: {
+      control: false,
+    },
+  },
+  render: (args) => (
+    <Button
+      {...args}
+      className="px-2.5 text-gray-700 focus:ring-gray-100"
+      visual="gray"
+      variant="outlined"
+    >
+      <Apple2 />
+    </Button>
+  ),
+};
+
 export const TwitterIconOutlined: Story = {
   args: {
     size: "md",

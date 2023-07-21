@@ -60,7 +60,7 @@ export const GoogleSheetIconVariant: Story = {
 
       <div className="flex gap-x-3">
         <Switch size="md" />
-        <Label>Enable All Permissions</Label>
+        <Label size="sm">Enable All Permissions</Label>
       </div>
     </Card>
   ),

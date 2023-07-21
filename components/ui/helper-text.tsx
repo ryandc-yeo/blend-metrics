@@ -5,17 +5,17 @@ import { VariantProps, cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const helperTextVariants = cva("inline-block font-normal text-gray-500", {
+const helperTextVariants = cva("inline-block text-gray-500 font-normal", {
   variants: {
     size: {
-      xs: "text-xs",
+      xs: "text-xs leading-[18px]",
       sm: "text-sm",
       md: "text-base",
       lg: "text-[18px] leading-7",
     },
   },
   defaultVariants: {
-    size: "sm",
+    size: "xs",
   },
 });
 

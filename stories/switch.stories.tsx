@@ -66,7 +66,9 @@ export const SmLabel: Story = {
   render: (args) => (
     <div className="flex gap-x-2">
       <Switch {...args} />
-      <Label>Remember me</Label>
+      <Label className="text-gray-700" size="sm">
+        Remember me
+      </Label>
     </div>
   ),
   parameters: {
@@ -87,7 +89,9 @@ export const MdLabel: Story = {
   render: (args) => (
     <div className="flex gap-x-3">
       <Switch {...args} />
-      <Label size="md">Remember me</Label>
+      <Label className="text-gray-700" size="md">
+        Remember me
+      </Label>
     </div>
   ),
   parameters: {
@@ -105,7 +109,9 @@ export const LgLabel: Story = {
   render: (args) => (
     <div className="flex gap-x-3">
       <Switch {...args} />
-      <Label size="lg">Remember me</Label>
+      <Label className="text-gray-700" size="lg">
+        Remember me
+      </Label>
     </div>
   ),
   parameters: {
@@ -124,9 +130,9 @@ export const SmLabelHelperText: Story = {
   render: (args) => (
     <div className="flex gap-x-2">
       <Switch {...args} />
-      <Label className="flex flex-col">
+      <Label size="sm" className="flex flex-col text-gray-700">
         Remember me
-        <HelperText>Save my login details for next time.</HelperText>
+        <HelperText size="sm">Save my login details for next time.</HelperText>
       </Label>
     </div>
   ),
@@ -152,7 +158,7 @@ export const MdLabelHelperText: Story = {
   render: (args) => (
     <div className="flex gap-x-3">
       <Switch {...args} />
-      <Label className="flex flex-col" size="md">
+      <Label className="flex flex-col text-gray-700" size="md">
         Remember me
         <HelperText size="md">Save my login details for next time.</HelperText>
       </Label>
@@ -177,7 +183,7 @@ export const LgLabelHelperText: Story = {
   render: (args) => (
     <div className="flex gap-x-3">
       <Switch {...args} />
-      <Label className="flex flex-col" size="lg">
+      <Label className="flex flex-col text-gray-700" size="lg">
         Remember me
         <HelperText size="lg">Save my login details for next time.</HelperText>
       </Label>

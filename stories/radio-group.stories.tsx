@@ -33,22 +33,12 @@ export const SmLabel: Story = {
       <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioButton value="Option 1" id="option-one" />
-          <Label
-            className="text-xs leading-[18px] text-gray-800"
-            htmlFor="option-one"
-          >
-            Option 1
-          </Label>
+          <Label htmlFor="option-one">Option 1</Label>
         </div>
 
         <div className="flex gap-x-3">
           <RadioButton value="Option 2" id="option-two" />
-          <Label
-            className="text-xs leading-[18px] text-gray-800"
-            htmlFor="option-two"
-          >
-            Option 2
-          </Label>
+          <Label htmlFor="option-two">Option 2</Label>
         </div>
       </RadioGroup>
     );
@@ -56,7 +46,7 @@ export const SmLabel: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202143&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202143&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -67,14 +57,14 @@ export const MdLabel: Story = {
       <RadioGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
           <RadioButton size="md" value="Option 1" id="option-one" />
-          <Label className="text-gray-800" htmlFor="option-one">
+          <Label size="sm" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
           <RadioButton size="md" value="Option 2" id="option-two" />
-          <Label className="text-gray-800" htmlFor="option-two">
+          <Label size="sm" htmlFor="option-two">
             Option 2
           </Label>
         </div>
@@ -84,7 +74,7 @@ export const MdLabel: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202225&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202225&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -95,14 +85,14 @@ export const LgLabel: Story = {
       <RadioGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
           <RadioButton size="lg" value="Option 1" id="option-one" />
-          <Label className="text-gray-800" size="md" htmlFor="option-one">
+          <Label size="md" htmlFor="option-one">
             Option 1
           </Label>
         </div>
 
         <div className="flex gap-x-4">
           <RadioButton size="lg" value="Option 2" id="option-two" />
-          <Label className="text-gray-800" size="md" htmlFor="option-two">
+          <Label size="md" htmlFor="option-two">
             Option 2
           </Label>
         </div>
@@ -112,7 +102,7 @@ export const LgLabel: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202303&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202303&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -123,27 +113,15 @@ export const SmLabelHelperText: Story = {
       <RadioGroup {...args}>
         <div className="flex gap-x-3">
           <RadioButton value="Option 1" id="option-one" />
-          <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800"
-            htmlFor="option-one"
-          >
-            Option 1
-            <HelperText className="text-xs leading-[18px]">
-              Short description here
-            </HelperText>
+          <Label className="flex flex-col" htmlFor="option-one">
+            Option 1<HelperText>Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-3">
           <RadioButton value="Option 2" id="option-two" />
-          <Label
-            className="flex flex-col text-xs leading-[18px] text-gray-800"
-            htmlFor="option-two"
-          >
-            Option 2
-            <HelperText className="text-xs leading-[18px]">
-              Short description here
-            </HelperText>
+          <Label className="flex flex-col" htmlFor="option-two">
+            Option 2<HelperText>Short description here</HelperText>
           </Label>
         </div>
       </RadioGroup>
@@ -152,7 +130,7 @@ export const SmLabelHelperText: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202158&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202158&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -163,15 +141,15 @@ export const MdLabelHelperText: Story = {
       <RadioGroup className="space-y-3" {...args}>
         <div className="flex gap-x-3.5">
           <RadioButton size="md" value="Option 1" id="option-one" />
-          <Label className="flex flex-col text-gray-800" htmlFor="option-one">
-            Option 1 <HelperText>Short description here</HelperText>
+          <Label size="sm" className="flex flex-col" htmlFor="option-one">
+            Option 1 <HelperText size="sm">Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-3.5">
           <RadioButton size="md" value="Option 2" id="option-two" />
-          <Label className="flex flex-col text-gray-800" htmlFor="option-two">
-            Option 2 <HelperText>Short description here</HelperText>
+          <Label size="sm" className="flex flex-col" htmlFor="option-two">
+            Option 2 <HelperText size="sm">Short description here</HelperText>
           </Label>
         </div>
       </RadioGroup>
@@ -180,7 +158,7 @@ export const MdLabelHelperText: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202219&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202219&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -191,22 +169,14 @@ export const LgLabelHelperText: Story = {
       <RadioGroup className="space-y-3.5" {...args}>
         <div className="flex gap-x-4">
           <RadioButton size="lg" value="Option 1" id="option-one" />
-          <Label
-            className="flex flex-col text-gray-800"
-            size="md"
-            htmlFor="option-one"
-          >
+          <Label className="flex flex-col" size="md" htmlFor="option-one">
             Option 1 <HelperText size="md">Short description here</HelperText>
           </Label>
         </div>
 
         <div className="flex gap-x-4">
           <RadioButton size="lg" value="Option 2" id="option-two" />
-          <Label
-            className="flex flex-col text-gray-800"
-            size="md"
-            htmlFor="option-two"
-          >
+          <Label className="flex flex-col" size="md" htmlFor="option-two">
             Option 2 <HelperText size="md">Short description here</HelperText>
           </Label>
         </div>
@@ -216,7 +186,7 @@ export const LgLabelHelperText: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202297&mode=design&t=rlIa0Hm4A6BZWLwF-4",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202297&mode=design&t=oI200WrSfiwzeWIG-4",
     },
   },
 };
@@ -225,7 +195,7 @@ export const SmSelector: Story = {
   render: (args) => {
     return (
       <RadioGroup className="space-y-5" {...args}>
-        <Label className="block" size="xs">
+        <Label className="block">
           <RadioGroupItem
             className="group flex w-full items-center gap-x-5 rounded-[7px] border-2 px-5 py-2 text-left data-[state=checked]:border-primary-400 hover:border-gray-300 data-[state=checked]:hover:border-primary-400 focus:border-primary-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:hover:border-gray-200"
             value="Option 1"
@@ -238,11 +208,11 @@ export const SmSelector: Story = {
 
             <div className="flex flex-col group-disabled:opacity-50">
               <span>Option 1</span>
-              <HelperText size="xs">Short description here</HelperText>
+              <HelperText>Short description here</HelperText>
             </div>
           </RadioGroupItem>
         </Label>
-        <Label className="block" size="xs">
+        <Label className="block">
           <RadioGroupItem
             className="group flex w-full items-center gap-x-5 rounded-[7px] border-2 px-5 py-2 text-left data-[state=checked]:border-primary-500 hover:border-gray-300 data-[state=checked]:hover:border-primary-400 focus:border-primary-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-gray-200 disabled:hover:border-gray-200"
             value="Option 2"
@@ -255,12 +225,18 @@ export const SmSelector: Story = {
 
             <div className="flex flex-col group-disabled:opacity-50">
               <span>Option 2</span>
-              <HelperText size="xs">Short description here</HelperText>
+              <HelperText>Short description here</HelperText>
             </div>
           </RadioGroupItem>
         </Label>
       </RadioGroup>
     );
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202171&mode=design&t=oI200WrSfiwzeWIG-4",
+    },
   },
 };
 
@@ -306,6 +282,12 @@ export const MdSelector: Story = {
       </RadioGroup>
     );
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202214&mode=design&t=oI200WrSfiwzeWIG-4",
+    },
+  },
 };
 
 export const LgSelector: Story = {
@@ -349,5 +331,11 @@ export const LgSelector: Story = {
         </Label>
       </RadioGroup>
     );
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/CgaxYAFROXbQH5fgPw8sX4/Blend-Metrics---New-Design-System?type=design&node-id=515-202292&mode=design&t=oI200WrSfiwzeWIG-4",
+    },
   },
 };

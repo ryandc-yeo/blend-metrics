@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 
 const FourDigitPinInput = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLDivElement> & { placeholder?: string }
+>(({ className, placeholder = "0", ...props }, ref) => {
   const id = React.useId();
-  const [state, send] = useMachine(pinInput.machine({ id, placeholder: "0" }));
+  const [state, send] = useMachine(pinInput.machine({ id, placeholder }));
 
   const api = pinInput.connect(state, send, normalizeProps);
 
@@ -46,10 +46,10 @@ FourDigitPinInput.displayName = "FourDigitPinInput";
 
 const SixDigitPinInput = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLDivElement> & { placeholder?: string }
+>(({ className, placeholder = "0", ...props }, ref) => {
   const id = React.useId();
-  const [state, send] = useMachine(pinInput.machine({ id, placeholder: "0" }));
+  const [state, send] = useMachine(pinInput.machine({ id, placeholder }));
 
   const api = pinInput.connect(state, send, normalizeProps);
 

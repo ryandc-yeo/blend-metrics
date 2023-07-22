@@ -39,3 +39,6 @@ export * from "./pen-square";
 export * from "./link";
 export * from "./arrow-down-to-line";
 export * from "./star";
+export * from "./alert-circle";
+export * from "./master-card";
+export * from "./email";

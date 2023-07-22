@@ -121,7 +121,7 @@ export const GrayOutlined: Story = {
 
 export const IconFilled: Story = {
   render: (args) => (
-    <ButtonGroup className="grid max-w-sm grid-cols-3" {...args}>
+    <ButtonGroup className="grid grid-cols-3" {...args}>
       <Button
         className="px-2.5 text-gray-700 focus:ring-gray-100"
         size="md"
@@ -150,7 +150,7 @@ export const IconFilled: Story = {
 
 export const IconOutlined: Story = {
   render: (args) => (
-    <ButtonGroup className="grid max-w-sm grid-cols-3" {...args}>
+    <ButtonGroup className="grid grid-cols-3" {...args}>
       <Button
         className="px-2.5 text-gray-700 focus:ring-gray-100"
         size="md"
@@ -181,7 +181,7 @@ export const IconOutlined: Story = {
 
 export const GrayIconOutlined: Story = {
   render: (args) => (
-    <ButtonGroup className="grid max-w-sm grid-cols-3" {...args}>
+    <ButtonGroup className="grid grid-cols-3" {...args}>
       <Button
         className="px-2.5 text-gray-700 focus:ring-gray-100"
         size="md"

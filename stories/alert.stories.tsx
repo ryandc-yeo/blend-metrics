@@ -46,7 +46,7 @@ export const FullWidthAlertSuccessPrimary: Story = {
       <CheckCircle className="h-5 w-5 flex-none" />
       <div className="flex-auto">
         <AlertTitle>Successfully updated profile</AlertTitle>
-        <AlertDescription>
+        <AlertDescription className="mt-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
           pariatur, ipsum similique veniam.
         </AlertDescription>
@@ -85,7 +85,7 @@ export const FullWidthAlertDefaultError: Story = {
       <AlertCircle className="h-5 w-5 flex-none" />
       <div className="flex-auto">
         <AlertTitle>Successfully updated profile</AlertTitle>
-        <AlertDescription>
+        <AlertDescription className="mt-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
           pariatur, ipsum similique veniam.
         </AlertDescription>
@@ -123,7 +123,7 @@ export const FullWidthAlertWarning: Story = {
       <AlertTriangle className="h-5 w-5 flex-none" />
       <div className="flex-auto">
         <AlertTitle>Successfully updated profile</AlertTitle>
-        <AlertDescription>
+        <AlertDescription className="mt-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
           pariatur, ipsum similique veniam.
         </AlertDescription>

@@ -42,3 +42,6 @@ export * from "./star";
 export * from "./alert-circle";
 export * from "./master-card";
 export * from "./email";
+export * from "./check-circle";
+export * from "./alert-triangle";
+export * from "./alert-circle2";

@@ -1,8 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Email, MasterCard } from "@/components/icons";
-import { HelperText, Label } from "@/components/ui";
-import { Input } from "@/components/ui/input";
+import { Email, HelpCircle, MasterCard } from "@/components/icons";
+import {
+  Input,
+  ErrorMessage,
+  HelperText,
+  Label,
+  InputLeftAddon,
+} from "@/components/ui";
 
 const meta: Meta = {
   title: "Input",
@@ -10,9 +15,6 @@ const meta: Meta = {
   argTypes: {
     disabled: {
       control: "boolean",
-    },
-    isInvalid: {
-      control: false,
     },
     leftIcon: {
       table: {
@@ -42,6 +44,7 @@ const meta: Meta = {
   },
   args: {
     disabled: false,
+    isInvalid: false,
   },
   parameters: {
     design: {
@@ -78,7 +81,7 @@ export const LabeledBase: Story = {
 };
 
 export const LabeledHelperTextBase: Story = {
-  render: (args) => (
+  render: ({ isInvalid, ...args }) => (
     <div className="space-y-1.5">
       <Label size="sm" htmlFor="email">
         Email
@@ -87,23 +90,102 @@ export const LabeledHelperTextBase: Story = {
         id="email"
         type="email"
         placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
     </div>
   ),
 };
 
 export const HelperTextBase: Story = {
-  render: (args) => (
+  render: ({ isInvalid, ...args }) => (
     <div className="space-y-1.5">
+      <Input
+        type="email"
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelpCircleBase: Story = {
+  render: (args) => (
+    <Input
+      type="email"
+      rightIcon={<HelpCircle />}
+      placeholder="olivia@untitledui.com"
+      {...args}
+    />
+  ),
+};
+
+export const LabeledHelpCircleBase: Story = {
+  render: ({ ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
       <Input
         id="email"
         type="email"
         placeholder="olivia@untitledui.com"
+        rightIcon={<HelpCircle />}
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
+    </div>
+  ),
+};
+
+export const LabeledHelperTextHelpCircleBase: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <Input
+        id="email"
+        type="email"
+        placeholder="olivia@untitledui.com"
+        rightIcon={<HelpCircle />}
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextHelpCircleBase: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Input
+        type="email"
+        placeholder="olivia@untitledui.com"
+        rightIcon={<HelpCircle />}
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
     </div>
   ),
 };
@@ -119,7 +201,7 @@ export const EmailIcon: Story = {
   ),
 };
 
-export const LabeledEmailIcon: Story = {
+export const LabeledEmail: Story = {
   render: (args) => (
     <div className="space-y-1.5">
       <Label size="sm" htmlFor="email">
@@ -136,8 +218,8 @@ export const LabeledEmailIcon: Story = {
   ),
 };
 
-export const LabeledHelperTextEmailIcon: Story = {
-  render: (args) => (
+export const LabeledHelperTextEmail: Story = {
+  render: ({ isInvalid, ...args }) => (
     <div className="space-y-1.5">
       <Label size="sm" htmlFor="email">
         Email
@@ -147,24 +229,107 @@ export const LabeledHelperTextEmailIcon: Story = {
         type="email"
         leftIcon={<Email />}
         placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
     </div>
   ),
 };
 
-export const HelperTextEmailIcon: Story = {
+export const HelperTextEmail: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Input
+        type="email"
+        leftIcon={<Email />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const EmailHelpCircle: Story = {
+  render: (args) => (
+    <Input
+      type="email"
+      leftIcon={<Email />}
+      rightIcon={<HelpCircle />}
+      placeholder="olivia@untitledui.com"
+      {...args}
+    />
+  ),
+};
+
+export const LabeledEmailHelpCircle: Story = {
   render: (args) => (
     <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
       <Input
         id="email"
         type="email"
         leftIcon={<Email />}
+        rightIcon={<HelpCircle />}
         placeholder="olivia@untitledui.com"
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
+    </div>
+  ),
+};
+
+export const LabeledHelperTextEmailHelpCircle: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <Input
+        id="email"
+        type="email"
+        leftIcon={<Email />}
+        rightIcon={<HelpCircle />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextEmailHelpCircle: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Input
+        type="email"
+        leftIcon={<Email />}
+        rightIcon={<HelpCircle />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
     </div>
   ),
 };
@@ -182,15 +347,15 @@ export const MasterCardIcon: Story = {
   ),
 };
 
-export const LabeledMasterCardIcon: Story = {
+export const LabeledMasterCard: Story = {
   render: (args) => (
     <div className="space-y-1.5">
       <Label size="sm" htmlFor="email">
         Email
       </Label>
       <Input
-        id="email"
         className="pl-[52px]"
+        id="email"
         leftIconRootClassName="left-[14px]"
         type="email"
         leftIcon={<MasterCard />}
@@ -201,39 +366,298 @@ export const LabeledMasterCardIcon: Story = {
   ),
 };
 
-export const LabeledHelperTextMasterCardIcon: Story = {
+export const LabeledHelperTextMasterCard: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <Input
+        className="pl-[52px]"
+        id="email"
+        leftIconRootClassName="left-[14px]"
+        type="email"
+        leftIcon={<MasterCard />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage size="sm">This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextMasterCard: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Input
+        className="pl-[52px]"
+        leftIconRootClassName="left-[14px]"
+        type="email"
+        leftIcon={<MasterCard />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage size="sm">This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const MasterCardHelpCircle: Story = {
+  render: (args) => (
+    <Input
+      className="pl-[52px]"
+      leftIconRootClassName="left-[14px]"
+      type="email"
+      leftIcon={<MasterCard />}
+      rightIcon={<HelpCircle className="text-gray-400" />}
+      placeholder="olivia@untitledui.com"
+      {...args}
+    />
+  ),
+};
+
+export const LabeledMasterCardHelpCircle: Story = {
   render: (args) => (
     <div className="space-y-1.5">
       <Label size="sm" htmlFor="email">
         Email
       </Label>
       <Input
-        id="email"
         className="pl-[52px]"
+        id="email"
         leftIconRootClassName="left-[14px]"
         type="email"
         leftIcon={<MasterCard />}
+        rightIcon={<HelpCircle className="text-gray-400" />}
         placeholder="olivia@untitledui.com"
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
     </div>
   ),
 };
 
-export const HelperTextMasterCardIcon: Story = {
-  render: (args) => (
+export const LabeledHelperTextMasterCardHelpCircle: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <Input
+        className="pl-[52px]"
+        leftIconRootClassName="left-[14px]"
+        id="email"
+        type="email"
+        leftIcon={<MasterCard />}
+        rightIcon={<HelpCircle className="text-gray-400" />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage size="sm">This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextMasterCardHelpCircle: Story = {
+  render: ({ isInvalid, ...args }) => (
     <div className="space-y-1.5">
       <Input
-        id="email"
         className="pl-[52px]"
         leftIconRootClassName="left-[14px]"
         type="email"
         leftIcon={<MasterCard />}
+        rightIcon={<HelpCircle className="text-gray-400" />}
+        placeholder="olivia@untitledui.com"
+        isInvalid={isInvalid}
+        {...args}
+      />
+      {isInvalid ? (
+        <ErrorMessage size="sm">This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const LeftAddon: Story = {
+  render: (args) => (
+    <div className="flex items-center">
+      <InputLeftAddon>https://</InputLeftAddon>
+      <Input
+        className="rounded-l-none"
+        type="email"
         placeholder="olivia@untitledui.com"
         {...args}
       />
-      <HelperText size="sm">This is a hint text to help user.</HelperText>
+    </div>
+  ),
+};
+
+export const LabeledLeftAddon: Story = {
+  render: (args) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          id="email"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          {...args}
+        />
+      </div>
+    </div>
+  ),
+};
+
+export const LabeledHelperTextLeftAddon: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          id="email"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          isInvalid={isInvalid}
+          {...args}
+        />
+      </div>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextLeftAddon: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          isInvalid={isInvalid}
+          {...args}
+        />
+      </div>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelpCircleLeftAddon: Story = {
+  render: (args) => (
+    <div className="flex items-center">
+      <InputLeftAddon>https://</InputLeftAddon>
+      <Input
+        className="rounded-l-none"
+        type="email"
+        rightIcon={<HelpCircle />}
+        placeholder="olivia@untitledui.com"
+        {...args}
+      />
+    </div>
+  ),
+};
+
+export const LabeledHelpCircleLeftAddon: Story = {
+  render: ({ ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          id="email"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          rightIcon={<HelpCircle />}
+          {...args}
+        />
+      </div>
+    </div>
+  ),
+};
+
+export const LabeledHelperTextHelpCircleLeftAddon: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <Label size="sm" htmlFor="email">
+        Email
+      </Label>
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          id="email"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          rightIcon={<HelpCircle />}
+          isInvalid={isInvalid}
+          {...args}
+        />
+      </div>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
+    </div>
+  ),
+};
+
+export const HelperTextHelpCircleLeftAddon: Story = {
+  render: ({ isInvalid, ...args }) => (
+    <div className="space-y-1.5">
+      <div className="flex items-center">
+        <InputLeftAddon>https://</InputLeftAddon>
+        <Input
+          className="rounded-l-none"
+          type="email"
+          placeholder="olivia@untitledui.com"
+          rightIcon={<HelpCircle />}
+          isInvalid={isInvalid}
+          {...args}
+        />
+      </div>
+      {isInvalid ? (
+        <ErrorMessage>This is an error message.</ErrorMessage>
+      ) : (
+        <HelperText size="sm">This is a hint text to help user.</HelperText>
+      )}
     </div>
   ),
 };

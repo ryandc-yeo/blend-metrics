@@ -15,3 +15,7 @@ export * from "./button";
 export * from "./button-group";
 export * from "./pin-input";
 export * from "./tabs";
+export * from "./error-message";
+export * from "./input-left-addon";
+export * from "./input-right-addon";
+export * from "./input";

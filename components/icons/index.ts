@@ -45,3 +45,5 @@ export * from "./email";
 export * from "./check-circle";
 export * from "./alert-triangle";
 export * from "./alert-circle2";
+export * from "./x2";
+export * from "./arrow-right2";

@@ -62,7 +62,7 @@ module.exports = {
           black: "#101828",
         },
         error: {
-          25: "#101828",
+          25: "#FFFBFA",
           50: "#FEF3F2",
           100: "#FEE4E2",
           200: "#FECDCA",

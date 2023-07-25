@@ -19,3 +19,4 @@ export * from "./error-message";
 export * from "./input-left-addon";
 export * from "./input-right-addon";
 export * from "./input";
+export * from "./textarea";

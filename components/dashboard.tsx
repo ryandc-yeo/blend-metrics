@@ -29,7 +29,7 @@ const Dashboard = () => {
               id="popup-target"
               className="text-sm font-semibold leading-5 text-gray-500"
             >
-              <PopUpWindow id={dropDownMenu} />
+              <PopUpWindow />
             </div>
           </div>
           <div className="flex h-[150px] gap-2.5">

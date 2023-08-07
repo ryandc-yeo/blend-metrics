@@ -1,12 +1,8 @@
-import Image from "next/image";
 import { GmailIcon } from "@/components/assets";
 
 const WorkflowTemplate = ({
-  // var1 = GmailIcon,
-  // var2 = GmailIcon,
-  // var3 = GmailIcon,
   header = "Send Google files to OneDrive",
-  body = "Lorem ipsum dolor sit amet, consec tetur adipiscing.",
+  body = "Lorem ipsum dolor sit amet, consec tetur adipiscing. Lorem ipsum dolor sit amet, consec tetur adipiscing.",
 }) => {
   return (
     // build popup window, add 300ms transition
@@ -15,17 +11,16 @@ const WorkflowTemplate = ({
         <GmailIcon />
         <GmailIcon />
         <GmailIcon />
-        {/* <Image src={var1} alt="a gmail icon" />
-        <Image src={var2} alt="a gmail icon" />
-        <Image src={var3} alt="a gmail icon" /> */}
       </div>
       <div className="relative flex flex-col gap-[5px]">
-        <h4 className="min-h-[14px] text-xs font-semibold leading-[14px] text-gray-600 duration-300 group-hover:w-[88%] group-hover:truncate">
+        <h4 className="min-h-[14px] text-xs font-semibold leading-[14px] text-gray-600 transition-all duration-300 ease-out group-hover:w-[88%] group-hover:truncate">
           {header}
         </h4>
+
         <textarea
           rows={4}
-          className="bottom- h-8 resize-none self-stretch overflow-hidden border-none bg-transparent text-xs font-normal text-gray-500 shadow-none outline-none group-hover:h-full"
+          className="h-8 resize-none self-stretch overflow-hidden border-none bg-transparent p-0 text-xs font-normal text-gray-500 shadow-none outline-none transition-all duration-300 ease-out group-hover:h-full"
+          disabled
         >
           {body}
         </textarea>

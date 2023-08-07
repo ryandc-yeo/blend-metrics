@@ -10,7 +10,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { CloseIcon } from "./assets";
 
-const PopUpWindow = ({ id }) => {
+const PopUpWindow = () => {
   return (
     <div>
       {/* You can open the modal using ID.showModal() method */}

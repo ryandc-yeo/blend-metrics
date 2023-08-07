@@ -46,7 +46,7 @@ export const Base: Story = {
   render: (args) => {
     return (
       <DropdownMenu {...args}>
-        <DropdownMenuTrigger className="flex items-center justify-center gap-x-1 text-sm font-medium text-gray-900 focus-visible:outline-none">
+        <DropdownMenuTrigger className="mt-[-10px] flex items-center justify-center gap-x-1 text-sm font-medium text-gray-900 focus-visible:outline-none">
           Edit <ChevronDown className="text-gray-500" />
         </DropdownMenuTrigger>
 

@@ -1,3 +1,6 @@
+"use client";
+
+import { createContext } from "react";
 import FindTriggers from "./findTriggers";
 import { CloseIcon } from "@/components/assets";
 import Image from "next/image";
@@ -11,12 +14,11 @@ const PopUpHeader = () => {
       </div>
       <div className="flex items-center gap-3 self-stretch">
         <FindTriggers />
-        <Dialog.Close>
+        {/* <Dialog.Close>
           <div className="flex h-9 w-9 items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:bg-gray-100">
             <CloseIcon />
-            {/* <Image src={CloseIcon} alt="close button" /> */}
           </div>
-        </Dialog.Close>
+        </Dialog.Close> */}
       </div>
     </div>
   );

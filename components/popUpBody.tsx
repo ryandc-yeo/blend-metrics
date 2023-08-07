@@ -1,3 +1,7 @@
+"use client";
+
+import { createContext } from "react";
+
 import { useState } from "react";
 import WorkflowSetup from "./workflowSetup";
 import {
@@ -9,22 +13,28 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 import Image from "next/image";
 import ProfileCard from "./profileCard";
 import Triggers from "./triggers";
-// import {DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuCheckboxItem, DropdownMenuShortcut, ChevronDown} from
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui";
+import { ChevronDown } from "@/components/icons";
 
 // https://upmostly.com/tutorials/calling-a-react-component-on-button-click
 
-const PopUpBody = (
-  {
-    /*args*/
-  }
-) => {
+const PopUpBody = ({
+  /*args*/
+  args = [1, 2, 3],
+}) => {
   const [overlay, setOverlay] = useState(true);
 
   return (
     <ScrollArea.Root className="h-[635px] w-fit overflow-hidden rounded-br-xl bg-gray-50 p-8">
       <ScrollArea.Viewport className="flex h-full w-full flex-col gap-10">
         {overlay ? (
-          <div className="w-[972px]">
+          <div className="m-1 w-[972px]">
             <div
               className="flex justify-between pb-8 hover:cursor-pointer"
               onClick={() => {
@@ -71,7 +81,25 @@ const PopUpBody = (
               </div>
               <ProfileCard />
               <div className="flex flex-col gap-4">
-                <Triggers count={7} />
+                <Tabs defaultValue="triggers" {...args}>
+                  <TabsList className="border-none px-[-20px] pb-4">
+                    <TabsTrigger
+                      value="triggers"
+                      className="border-transparent"
+                    >
+                      Triggers
+                    </TabsTrigger>
+                    <TabsTrigger value="actions" className="border-transparent">
+                      Actions
+                    </TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="triggers">
+                    <Triggers count={7} />
+                  </TabsContent>
+                  <TabsContent value="actions">
+                    <Triggers count={3} />
+                  </TabsContent>
+                </Tabs>
               </div>
             </section>
             <section className="flex flex-col gap-4">
@@ -84,32 +112,46 @@ const PopUpBody = (
                 </button>
               </div>
               <div className="ml-0.5 flex h-fit w-full flex-wrap gap-5 overflow-visible border-none">
+                {/* <VideoPlayerImage />
                 <VideoPlayerImage />
                 <VideoPlayerImage />
                 <VideoPlayerImage />
                 <VideoPlayerImage />
-                <VideoPlayerImage />
-                <VideoPlayerImage />
-                {/* <WorkflowSetup image={VideoPlayer} />
-                <WorkflowSetup image={VideoPlayer} />
-                <WorkflowSetup image={VideoPlayer} />
-                <WorkflowSetup image={VideoPlayer} />
-                <WorkflowSetup image={VideoPlayer} />
-                <WorkflowSetup image={VideoPlayer} /> */}
+                <VideoPlayerImage /> */}
+                <WorkflowSetup />
+                <WorkflowSetup />
+                <WorkflowSetup />
+                <WorkflowSetup />
+                <WorkflowSetup />
+                <WorkflowSetup />
               </div>
             </section>
           </div>
         ) : (
-          <div>
+          <div className="m-1">
             <section id="featured" className="flex flex-col gap-4 self-stretch">
               <div className="flex w-[972px] items-center justify-between">
                 <div className="text-xl font-semibold leading-8 text-gray-600">
                   Featured
                 </div>
-                <div>
+                <div className="flex items-center gap-3">
                   <div className="text-sm font-medium leading-5 text-gray-500">
                     Filter
                   </div>
+                  {/* issue with dropdown column */}
+                  <DropdownMenu {...args}>
+                    <DropdownMenuTrigger className="flex h-9 w-[168px] items-center justify-between rounded-[5px] border border-gray-300 bg-white px-3.5 py-2.5 text-sm font-semibold capitalize text-gray-900 focus-visible:outline-none">
+                      <p>All Templates</p>{" "}
+                      <ChevronDown className="text-gray-500" />
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent className="min-w-[202px]">
+                      <DropdownMenuItem>Option 1</DropdownMenuItem>
+                      <DropdownMenuItem>Option 1</DropdownMenuItem>
+                      <DropdownMenuItem>Option 1</DropdownMenuItem>
+                      <DropdownMenuItem>Option 1</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                   {/* <DropdownMenu {...args}>
                 <DropdownMenuTrigger className="inline-flex items-center gap-x-2 rounded-[5px] border border-gray-300 px-[14px] py-2 text-sm font-semibold text-gray-800 focus-visible:outline-none">
                   Select{" "}
@@ -145,7 +187,7 @@ const PopUpBody = (
               </DropdownMenu> */}
                 </div>
               </div>
-              <div className="flex w-[972px] gap-5 pl-0.5">
+              <div className="flex w-[972px] gap-5">
                 <WorkflowSetup />
                 <WorkflowSetup />
                 <WorkflowSetup />
@@ -158,7 +200,7 @@ const PopUpBody = (
               <div className="text-xl font-semibold leading-8 text-gray-600">
                 All Category
               </div>
-              <div className="flex w-[972px] gap-5 pl-0.5">
+              <div className="flex w-[972px] gap-5">
                 <WorkflowSetup />
                 <WorkflowSetup />
                 <WorkflowSetup />

@@ -24,7 +24,7 @@ const WorkflowSetup = ({
     <div className="group flex max-w-[308px] flex-col justify-center gap-5 rounded-lg bg-white p-5 shadow-[0_1px_4px_0_rgba(0,0,0,0.03)] outline outline-1 outline-gray-200 duration-300 ease-out hover:outline-2 hover:outline-gray-300">
       <div>
         <div className="mb-3 rounded-lg border border-gray-200">
-          <MetricItemImage />
+          <MetricItemImage cName={undefined} />
           {/* <Image src={image} alt="metric item" /> */}
         </div>
         <div className="mb-3 flex flex-row items-center gap-2">

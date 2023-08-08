@@ -14,11 +14,6 @@ const PopUpHeader = () => {
       </div>
       <div className="flex items-center gap-3 self-stretch">
         <FindTriggers />
-        {/* <Dialog.Close>
-          <div className="flex h-9 w-9 items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:bg-gray-100">
-            <CloseIcon />
-          </div>
-        </Dialog.Close> */}
       </div>
     </div>
   );

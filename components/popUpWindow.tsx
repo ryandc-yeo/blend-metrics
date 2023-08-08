@@ -51,11 +51,11 @@ const PopUpWindow = () => {
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
+                enterFrom="opacity-0 scale-95 -translate-y-56"
+                enterTo="opacity-100 scale-100 translate-y-0"
                 leave="ease-in duration-300"
                 leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                leaveTo="opacity-0 scale-95 -translate-y-56"
               >
                 <Dialog.Panel className="w-[1260px] transform overflow-hidden rounded-xl bg-white transition-all">
                   <section

@@ -6,6 +6,7 @@ import { useState } from "react";
 import WorkflowSetup from "./workflowSetup";
 import {
   BackBtn,
+  ExpandIcon,
   MetricItemImage,
   VideoPlayerImage,
 } from "@/components/assets";
@@ -18,7 +19,9 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  Button,
 } from "@/components/ui";
+import { AiOutlineHeart } from "react-icons/ai";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui";
 import { ChevronDown } from "@/components/icons";
 
@@ -32,12 +35,12 @@ const PopUpBody = ({
 
   return (
     <ScrollArea.Root className="h-[635px] w-fit overflow-hidden rounded-br-xl bg-gray-50 p-8">
-      <ScrollArea.Viewport className="flex h-full w-full flex-col gap-10">
+      <ScrollArea.Viewport className="mx-2 flex h-full w-full flex-col gap-10">
         {overlay ? (
           <div className="m-1 w-[972px]">
-            <div className="flex justify-between pb-8 hover:cursor-pointer">
+            <div className="flex items-center justify-between pb-8">
               <div
-                className="flex gap-1 text-sm font-semibold leading-5 text-[#306CFE]"
+                className="flex gap-1 text-sm font-semibold leading-5 text-[#306CFE] hover:cursor-pointer"
                 onClick={() => {
                   setOverlay(!overlay);
                 }}
@@ -46,14 +49,25 @@ const PopUpBody = ({
                 {/* <Image src={BackBtn} alt="back button" /> */}
                 <p>Back to Templates</p>
               </div>
+              <div className="flex gap-3">
+                <Button
+                  leftIcon={<AiOutlineHeart style={{ color: "#1D2939" }} />}
+                  className="border border-gray-300 bg-white text-[#1D2939] duration-300 hover:bg-gray-100"
+                >
+                  Save for Later
+                </Button>
+                <Button>Try this Template</Button>
+              </div>
             </div>
-            <div className="h-[325px] overflow-hidden rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)]">
-              <MetricItemImage cName={undefined} />
-              {/* <Image
-                src={MetricItemImage}
-                alt="metric item"
-                className="translate-y-[-20%] "
-              /> */}
+            <div className="relative h-[325px] overflow-hidden rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)]">
+              <MetricItemImage cName="w-full h-full" />
+              <Button
+                rightIcon={<ExpandIcon />}
+                visual="gray"
+                className="absolute right-5 top-5 text-[13px] text-gray-500 shadow-none"
+              >
+                Expand Preview
+              </Button>
             </div>
             <section className="flex flex-col gap-8 self-stretch py-8">
               <div className="flex flex-col gap-3 self-stretch">
@@ -107,7 +121,7 @@ const PopUpBody = ({
                 <h2 className="text-[20px] font-semibold leading-8 text-gray-600">
                   Related Templates
                 </h2>
-                <button className="text-sm font-semibold capitalize leading-5 text-gray-500">
+                <button className="text-sm font-semibold capitalize leading-5 text-gray-500 duration-300 hover:underline">
                   View More
                 </button>
               </div>
@@ -138,7 +152,6 @@ const PopUpBody = ({
                   <div className="text-sm font-medium leading-5 text-gray-500">
                     Filter
                   </div>
-                  {/* issue with dropdown column */}
                   <DropdownMenu {...args}>
                     <DropdownMenuTrigger className="flex h-9 w-[168px] items-center justify-between rounded-[5px] border border-gray-300 bg-white px-3.5 py-2.5 text-sm font-semibold capitalize text-gray-900 focus-visible:outline-none">
                       <p>All Templates</p>{" "}
@@ -152,39 +165,6 @@ const PopUpBody = ({
                       <DropdownMenuItem>Option 1</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                  {/* <DropdownMenu {...args}>
-                <DropdownMenuTrigger className="inline-flex items-center gap-x-2 rounded-[5px] border border-gray-300 px-[14px] py-2 text-sm font-semibold text-gray-800 focus-visible:outline-none">
-                  Select{" "}
-                  <ChevronDown className="h-[15px] w-[15px] text-gray-500" />
-                </DropdownMenuTrigger>
-
-                <DropdownMenuContent className="min-w-[180px] py-1">
-                  <DropdownMenuCheckboxItem>
-                    <div className="flex items-center justify-between">
-                      Select
-                      <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
-                    </div>
-                  </DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>
-                    <div className="flex items-center justify-between">
-                      Select
-                      <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
-                    </div>
-                  </DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>
-                    <div className="flex items-center justify-between">
-                      Select
-                      <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
-                    </div>
-                  </DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>
-                    <div className="flex items-center justify-between">
-                      Select
-                      <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
-                    </div>
-                  </DropdownMenuCheckboxItem>
-                </DropdownMenuContent>
-              </DropdownMenu> */}
                 </div>
               </div>
               <div className="flex w-[972px] gap-5">

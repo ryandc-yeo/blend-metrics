@@ -32,6 +32,7 @@ const WorkflowTemplate_Sidebar = () => {
                   title="view all"
                   icon={ViewAllIcon}
                   iconBlue={ViewAllBlueIcon}
+                  variant={true}
                 />
                 <CategoryName
                   title="recommended"

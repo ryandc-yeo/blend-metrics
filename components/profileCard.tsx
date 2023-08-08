@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { GmailIcon, ProfilePictureImage } from "@/components/assets";
+import {
+  FigmaIcon,
+  GmailIcon,
+  GoogleCalendarIcon,
+  GoogleEditorIcon,
+  ProfilePictureImage,
+} from "@/components/assets";
 
 const ProfileCard = ({
   creatorName = "Creator Name",
@@ -15,12 +21,6 @@ const ProfileCard = ({
       <div className="flex gap-4">
         <div className="h-9 w-9 rounded-full">
           <ProfilePictureImage />
-          {/* <Image
-            src={ProfilePic}
-            alt="profile picture"
-            width={36}
-            height={36}
-          /> */}
         </div>
         <div className="flex flex-col gap-1">
           <h4 className="text-sm font-semibold leading-4 tracking-[0.6px] text-gray-700">
@@ -73,6 +73,9 @@ const ProfileCard = ({
                   //   key={index}
                   // />
                 ))} */}
+                <GmailIcon />
+                <GoogleCalendarIcon />
+                <GoogleEditorIcon />
               </div>
             </div>
           </div>

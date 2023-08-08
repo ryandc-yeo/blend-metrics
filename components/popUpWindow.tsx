@@ -24,10 +24,13 @@ const PopUpWindow = () => {
   }
 
   return (
-    <div>
+    <div className="absolute bottom-0 right-0 w-[145.5px]">
       {/* You can open the modal using ID.showModal() method */}
-      <button className="btn" onClick={openModal}>
-        trigger
+      <button
+        className="btn text-sm font-semibold leading-5 hover:underline"
+        onClick={openModal}
+      >
+        Browse All Templates
       </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>

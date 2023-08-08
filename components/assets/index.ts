@@ -27,6 +27,7 @@ export * from "./view-marketplace-icon";
 export * from "./workflowSetup_random-icon1";
 export * from "./workflowSetup_random-icon2";
 export * from "./workflowTemplate_random-icon";
+export * from "./user-plus-2";
 
 // app-icons
 export * from "./chrome-icon";

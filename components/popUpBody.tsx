@@ -35,20 +35,20 @@ const PopUpBody = ({
       <ScrollArea.Viewport className="flex h-full w-full flex-col gap-10">
         {overlay ? (
           <div className="m-1 w-[972px]">
-            <div
-              className="flex justify-between pb-8 hover:cursor-pointer"
-              onClick={() => {
-                setOverlay(!overlay);
-              }}
-            >
-              <div className="flex gap-1 text-sm font-semibold leading-5 text-[#306CFE]">
+            <div className="flex justify-between pb-8 hover:cursor-pointer">
+              <div
+                className="flex gap-1 text-sm font-semibold leading-5 text-[#306CFE]"
+                onClick={() => {
+                  setOverlay(!overlay);
+                }}
+              >
                 <BackBtn />
                 {/* <Image src={BackBtn} alt="back button" /> */}
                 <p>Back to Templates</p>
               </div>
             </div>
             <div className="h-[325px] overflow-hidden rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)]">
-              <MetricItemImage />
+              <MetricItemImage cName={undefined} />
               {/* <Image
                 src={MetricItemImage}
                 alt="metric item"

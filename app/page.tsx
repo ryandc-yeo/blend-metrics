@@ -4,7 +4,7 @@ import PopUpWindow from "@/components/popUpWindow";
 
 export default function Home() {
   return (
-    <main className="bg-black p-20">
+    <main className="bg-black">
       {/* <PopUpWindow /> */}
       <Dashboard />
     </main>

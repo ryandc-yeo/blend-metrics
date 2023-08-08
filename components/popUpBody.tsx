@@ -40,14 +40,16 @@ const PopUpBody = ({
           <div className="m-1 w-[972px]">
             <div className="flex items-center justify-between pb-8">
               <div
-                className="flex gap-1 text-sm font-semibold leading-5 text-[#306CFE] hover:cursor-pointer"
+                className="group flex items-center gap-1 text-sm font-semibold leading-5 text-[#306CFE] hover:cursor-pointer"
                 onClick={() => {
                   setOverlay(!overlay);
                 }}
               >
                 <BackBtn />
                 {/* <Image src={BackBtn} alt="back button" /> */}
-                <p>Back to Templates</p>
+                <p className="duration-300 group-hover:underline">
+                  Back to Templates
+                </p>
               </div>
               <div className="flex gap-3">
                 <Button
@@ -158,7 +160,7 @@ const PopUpBody = ({
                       <ChevronDown className="text-gray-500" />
                     </DropdownMenuTrigger>
 
-                    <DropdownMenuContent className="min-w-[202px]">
+                    <DropdownMenuContent className="min-w-[202px]" align="end">
                       <DropdownMenuItem>Option 1</DropdownMenuItem>
                       <DropdownMenuItem>Option 1</DropdownMenuItem>
                       <DropdownMenuItem>Option 1</DropdownMenuItem>

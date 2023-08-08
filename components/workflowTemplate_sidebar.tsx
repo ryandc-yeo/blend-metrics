@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import CategoryName from "./categoryName";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import {
@@ -12,6 +13,7 @@ import {
   MyCollectionIcon,
   MyCollectionBlueIcon,
 } from "@/components/assets";
+import { useState } from "react";
 
 const TAGS = Array.from({ length: 10 }).map(
   (_, i, a) => `Category Name ${a.length - i}`

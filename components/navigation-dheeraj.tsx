@@ -31,7 +31,7 @@ import {
 
 const NavigationSidebar = () => {
   return (
-    <nav className="flex h-screen w-[4vw] min-w-[70px] flex-col items-center border-r border-gray-200 bg-white">
+    <nav className="flex h-screen w-[70px] flex-col items-center border-r border-gray-200 bg-white">
       <div className="py-[22px]">
         <Link
           className="text-primary-500 focus:outline-none"

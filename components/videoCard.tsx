@@ -7,7 +7,7 @@ const VideoCard = ({
   timestamp = "01:20",
 }) => {
   return (
-    <div className="flex w-[150px] flex-col gap-[10px] hover:cursor-pointer">
+    <div className="flex w-[153px] flex-col gap-[10px] hover:cursor-pointer">
       <div className="group flex h-[92px] items-center justify-center rounded bg-black">
         {/* video thumbnail in the bg of div */}
         <PlayBtn className="absolute group-hover:opacity-0" />

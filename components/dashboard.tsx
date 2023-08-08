@@ -34,13 +34,13 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
         <section>
           <DashboardHeader />
         </section>
-        <ScrollArea.Root className="h-full w-full overflow-hidden bg-gray-50">
-          <ScrollArea.Viewport className="flex h-full w-full flex-col gap-10">
+        <ScrollArea.Root className="h-full w-[97vw] overflow-hidden bg-gray-50">
+          <ScrollArea.Viewport className="flex h-full w-full flex-col gap-10 py-[66px]">
             <section
               id="dashboard-body"
-              className="h-fit w-[96vw] bg-gray-50 px-[100px] py-[34px]"
+              className="m-auto h-fit w-[1105px] min-w-[1105px] bg-gray-50 py-[34px]"
             >
-              <div className="flex flex-col gap-[50px] p-8">
+              <div className="flex flex-col gap-[50px]">
                 <section className="flex flex-col gap-2.5">
                   <div className="flex justify-between">
                     <div className="flex flex-col gap-2.5">
@@ -101,7 +101,7 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
                               Shared With Me
                             </TabsTrigger>
                           </TabsList>
-                          <div className="flex items-end pb-4 text-sm font-semibold leading-5 text-gray-500 hover:cursor-pointer hover:underline">
+                          <div className="flex items-end pb-4 text-sm font-semibold leading-5 text-gray-500 transition-all duration-300 ease-in hover:cursor-pointer hover:underline">
                             <p>View All Projects</p>
                           </div>
                         </div>
@@ -112,12 +112,7 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
                         </TabsContent>
                         <TabsContent value="owned-by-me" className="w-full">
                           <RecentProjectColumns
-                            projects={[
-                              "Project 1",
-                              "Project 2",
-                              "Project 3",
-                              "Project 4",
-                            ]}
+                            projects={["Project 1", "Project 2", "Project 3"]}
                           />
                         </TabsContent>
                         <TabsContent value="shared-with-me" className="w-full">
@@ -127,7 +122,6 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
                               "Project 2",
                               "Project 3",
                               "Project 4",
-                              "Project 5",
                             ]}
                           />
                         </TabsContent>
@@ -145,7 +139,7 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
                       Pick one of our templates below or start with a blank
                       project.
                     </p>
-                    <p className="text-sm font-semibold capitalize leading-5 text-gray-500 hover:cursor-pointer hover:underline">
+                    <p className="text-sm font-semibold capitalize leading-5 text-gray-500 transition-all duration-300 ease-in hover:cursor-pointer hover:underline">
                       browse all apps
                     </p>
                   </div>
@@ -172,13 +166,11 @@ const Dashboard = ({ args = [1, 2, 3] }) => {
                       Get started with videos resources that show you how to get
                       the most out of Blend Metrics!
                     </p>
-                    <p className="text-sm font-semibold capitalize leading-5 text-gray-500 hover:cursor-pointer hover:underline">
+                    <p className="text-sm font-semibold capitalize leading-5 text-gray-500 transition-all duration-300 ease-in hover:cursor-pointer hover:underline">
                       view more tutorials
                     </p>
                   </div>
                   <div className="flex gap-2">
-                    <VideoCard />
-                    <VideoCard />
                     <VideoCard />
                     <VideoCard />
                     <VideoCard />

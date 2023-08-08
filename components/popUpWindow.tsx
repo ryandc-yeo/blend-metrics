@@ -71,8 +71,7 @@ const PopUpWindow = () => {
                         className="btn btn-sm btn-circle btn-ghost flex h-9 w-9 items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:bg-gray-100"
                         onClick={closeModal}
                       >
-                        {/* ✕ */}
-                        <CloseIcon />
+                        ✕{/* <CloseIcon /> */}
                       </button>
                     </div>
                   </section>

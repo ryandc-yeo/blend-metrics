@@ -14,7 +14,7 @@ import {
 
 export const Unknown = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <UnknownIcon />
       </div>
@@ -24,7 +24,7 @@ export const Unknown = () => {
 
 export const Evernote = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <EvernoteIcon />
       </div>
@@ -34,7 +34,7 @@ export const Evernote = () => {
 
 export const Tiktok = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <TikTokIcon />
       </div>
@@ -44,7 +44,7 @@ export const Tiktok = () => {
 
 export const Shopify = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <ShopifyIcon />
       </div>
@@ -54,7 +54,7 @@ export const Shopify = () => {
 
 export const Chrome = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <ChromeIcon />
       </div>
@@ -64,7 +64,7 @@ export const Chrome = () => {
 
 export const Figma = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <FigmaIcon />
       </div>
@@ -74,7 +74,7 @@ export const Figma = () => {
 
 export const Github = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <GithubIcon />
       </div>
@@ -84,7 +84,7 @@ export const Github = () => {
 
 export const Dell = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <DellIcon />
       </div>
@@ -94,7 +94,7 @@ export const Dell = () => {
 
 export const Dropbox = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <DropboxIcon />
       </div>
@@ -104,7 +104,7 @@ export const Dropbox = () => {
 
 export const Stripe = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <StripeIcon />
       </div>
@@ -114,7 +114,7 @@ export const Stripe = () => {
 
 export const Twitch = () => {
   return (
-    <div className="flex h-[90px] w-[92px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
+    <div className="flex h-[88px] w-[95px] flex-col items-center justify-center rounded-lg border border-gray-200 shadow-[0_1px_5px_0_rgba(16,24,40,0.02)] duration-300 hover:cursor-pointer hover:border-2 hover:border-gray-300">
       <div className="flex flex-row gap-2">
         <TwitchIcon />
       </div>
